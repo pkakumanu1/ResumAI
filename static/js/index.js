@@ -72,11 +72,11 @@ function fileInputControlChangeEventHandler(event) {
 function analyseCV(data) {
   alert("I am inside analyseCV");
   $.support.cors = true;
-  $.mobile.allowCrossDomainPages = true;
-  $.mobile.phonegapNavigationEnabled = true;
+  // $.mobile.allowCrossDomainPages = true;
+  // $.mobile.phonegapNavigationEnabled = true;
 
-  $.mobile.linkBindingEnabled = true;
-  $.mobile.ajaxEnabled = true;
+  // $.mobile.linkBindingEnabled = true;
+  // $.mobile.ajaxEnabled = true;
   // var settings = {
   //   "url": "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2019-07-12",
   //   "method": "POST",
@@ -131,10 +131,11 @@ function analyseCV(data) {
           var col = row.append('td').text(record['confidence'])
   
         }
-  }).fail(function(xhr, status, error){
-    alert("You got error", xhr, status, error)
-    console.log(xhr,status,error);
-  });
+  })
+  // .fail(function(xhr, status, error){
+  //   alert("You got error", xhr, status, error)
+  //   console.log(xhr,status,error);
+  // });
   sortTable(); 
   });
 
