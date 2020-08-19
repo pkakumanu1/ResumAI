@@ -81,7 +81,7 @@ function analyseCV(data) {
     },
     "data": data,
   };
-  var weHaveSuccess = false;
+  alert(settings);
   $.ajax(settings).done(function (response) {
     alert(response);
     var tableData = response['entities'];
@@ -109,6 +109,7 @@ function analyseCV(data) {
         }
   }).fail(function(xhr, status, error){
     alert("You got error", xhr, status, error)
+    console.log(xhr,status,error);
   });
   sortTable(); 
   });
