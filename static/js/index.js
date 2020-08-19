@@ -87,7 +87,7 @@ function analyseCV(data) {
   //   },
   //   "data": data,
   // };
-  alert({
+  alert("Setting",{
     "url": "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2019-07-12",
     "method": "POST",
     "timeout": 100,
