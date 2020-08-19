@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Resume Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <!-- MDBootstrap Datatables  -->
+  <!-- <link href="css/addons/datatables.min.css" rel="stylesheet"> -->
+  <!-- MDBootstrap Datatables  -->
+  <!-- <script type="text/javascript" src="js/addons/datatables.min.js"></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+  <!-- <script src="sorttable.js"></script> -->
+
+  <script src="https://d3js.org/d3.v4.js"></script>
+
+  <style>
+    textarea {
+      font-size:15px;
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Resume Reader
+            <img class="nav-ufo" src="../static/images/pic1.png">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <!-- <h1>Resume Finder</h1> -->
+      <!-- <p>The Truth is Out There</p> -->
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-4">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+
+                      <!-- <form action = "/uploader" method = "POST" 
+                        enctype = "multipart/form-data">
+                        <input type = "file" name = "file" id="inpFile">
+                        <button class="button" type = "submit">Upload File</button>
+                      </form> -->
+                      <form>
+                          <input type = "file" id = "fileInputControl" accept = "text/plain" >
+                          <textarea rows = "20" id = "preview"></textarea>
+                          <!-- <a href="#" class="btn button btn-secondary btn-lg active" role="button" aria-pressed="true">Submit</a> -->
+                      </form>
+                      
+                    </ul>
+                  </div>
+                  <!-- <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button> -->
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-8">
+          <div id="table-area" class="">
+            <table id="res-table" class="table sortable table-striped table-bordered table-sm">
+              <thead>
+                <tr>
+                  <th class="table-head">Name</th>
+                  <th class="table-head">Type</th>
+                  <th class="table-head">Confidence Level</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">Resume Reader</span>
+    </footer>
+  </div>
+  <!-- <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "5a9ea4ba-8bca-4ef1-b387-bd12b337f7e5", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "5c7202a1-7a71-43b2-9af1-8e5b7d1f8dd6", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+    });
+</script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../static/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- <script>
+  $( function() {
+    $( "#res-table" ).sortable();
+    $( "#res-table" ).disableSelection();
+  } );
+  </script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script> -->
+  <!-- <script>
+      const inpFile = document.getElementById("inpFile");
+
+      inpFile.addEventListener("change", function(){
+          console.log(inpFile.files);
+      })
+
+  </script> -->
+
+  <!-- <script src="static/js/data.js"></script> -->
+  <!-- <script src="static/js/app1.js"></script> -->
+</body>
+
+</html>
