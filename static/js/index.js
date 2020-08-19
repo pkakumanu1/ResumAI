@@ -72,7 +72,7 @@ function fileInputControlChangeEventHandler(event) {
 function analyseCV(data) {
   alert("I am inside analyseCV");
   $.support.cors = true;
-  $.mobile.allowCrossDomainPages = true;
+  // $.mobile.allowCrossDomainPages = true;
   $.mobile.phonegapNavigationEnabled = true;
 
   $.mobile.linkBindingEnabled = true;
@@ -107,7 +107,7 @@ function analyseCV(data) {
     },
     "data": data,
   }).done(function (response) {
-    alert(response);
+    alert("Response", response);
     var tableData = response['entities'];
     var body = d3.select("#res-table>tbody");
     body.html("");
