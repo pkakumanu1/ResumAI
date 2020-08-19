@@ -71,6 +71,12 @@ function fileInputControlChangeEventHandler(event) {
 
 function analyseCV(data) {
   alert("I am inside analyseCV");
+  $.support.cors = true;
+  $.mobile.allowCrossDomainPages = true;
+  $.mobile.phonegapNavigationEnabled = true;
+
+  $.mobile.linkBindingEnabled = true;
+  $.mobile.ajaxEnabled = true;
   // var settings = {
   //   "url": "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2019-07-12",
   //   "method": "POST",
@@ -94,7 +100,7 @@ function analyseCV(data) {
   $.ajax({
     "url": "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2019-07-12",
     "method": "POST",
-    "timeout": 100,
+    "timeout": 5000,
     "headers": {
       "Authorization": "Basic YXBpa2V5OktTblpMSHRMRVoxYjZWZmhsVVlkUVZZZUdxSmtEVV9oQllleEZWb25nWXFU",
       "Content-Type": "application/json"
