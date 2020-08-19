@@ -74,7 +74,7 @@ function analyseCV(data) {
   var settings = {
     "url": "https://gateway.watsonplatform.net/natural-language-understanding/api/v1/analyze?version=2019-07-12",
     "method": "POST",
-    "timeout": 0,
+    "timeout": 100,
     "headers": {
       "Authorization": "Basic YXBpa2V5OktTblpMSHRMRVoxYjZWZmhsVVlkUVZZZUdxSmtEVV9oQllleEZWb25nWXFU",
       "Content-Type": "application/json"
@@ -83,6 +83,7 @@ function analyseCV(data) {
   };
 
   $.ajax(settings).done(function (response) {
+    alert(response);
     var tableData = response['entities'];
     var body = d3.select("#res-table>tbody");
     body.html("");
