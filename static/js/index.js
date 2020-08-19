@@ -81,7 +81,7 @@ function analyseCV(data) {
     },
     "data": data,
   };
-
+  var weHaveSuccess = false;
   $.ajax(settings).done(function (response) {
     alert(response);
     var tableData = response['entities'];
@@ -107,6 +107,8 @@ function analyseCV(data) {
           var col = row.append('td').text(record['confidence'])
   
         }
+  }).fail(function(xhr, status, error){
+    alert("You got error", xhr, status, error)
   });
   sortTable(); 
   });
