@@ -136,6 +136,7 @@ function analyseCV(data) {
     "method": "POST",
     "timeout": 5000,
     "headers": {
+      "Access-Control-Allow-Origin": "*",
       "Authorization": "Basic YXBpa2V5OktTblpMSHRMRVoxYjZWZmhsVVlkUVZZZUdxSmtEVV9oQllleEZWb25nWXFU",
       "Content-Type": "application/json"
     },
