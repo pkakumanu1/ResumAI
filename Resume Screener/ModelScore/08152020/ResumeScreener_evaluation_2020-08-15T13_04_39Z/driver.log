@@ -1,0 +1,78 @@
+[32m[driverN::main][0mRunning: /opt/ibm/mnlp/bin/x86_64/opt/driverN -i /opt/ibm/mnlp/workspace/input_file_listing.fof -c /opt/ibm/mnlp/workspace/modeldata/decode.ddinf -l  -n 4 
+[32m[driverN::main][0m Maximum memory for clones set to 100Gb.
+[32m[driverN::main][0m/opt/ibm/mnlp/workspace/input_file_listing.fof is a list file, reading its contents...
+[33m[driverN::main][0mengine trigger not specified, will try use default in /opt/ibm/mnlp/workspace/modeldata/decode.ddinf
+[32m[ACEEngine::init][0m ddinf file is /opt/ibm/mnlp/workspace/modeldata/decode.ddinf
+[32m[ACEEngine::init][0m maximum number of mentions set to 2000
+[32m[ACEEngine::init][0m maximum size of allowed document set to 25600000 bytes
+[32m[ACEEngine::init][0m Loading models, please wait...
+[32m[ACEEngine::init][0m tokenizer engine language is undef
+[32m[ACEEngine::init][0m Memory before loading any engines [266[33mm[0m368[33mk[0m,89[33mm[0m472[33mk[0m].
+[32m[ACEEngine::init][0m Processing parse info from /opt/ibm/mnlp/workspace/modeldata/decode.ddinf
+[32m[ACEEngine::init][0m Got parser config 
+[32m[TokenizerEngine::create][0m Tokenizer engine type is TBLTok
+[32m[TBLTokEngine::init][0m Initializing TBLTokEngine with /opt/ibm/mnlp/workspace/modeldata/tokenizer/ml29-en/conf/tokenizer.ddinf
+[32m[TBLTokEngine::init][0m A sentence can contain at most 250 tokens.
+[32m[ACEEngine::init][0m Memory after loading tokenizer [309[33mm[0m528[33mk[0m,134[33mm[0m172[33mk[0m].
+[[32m__ibm__nlp__::ACEEngine::init_base[0m] Tokenizer loaded in 487[33mms[0m
+[32m[MentionDetectionEngine::init][0m Decoder type set to [31mviterbi[0m.
+Doing 1 pass over each document - read from /opt/ibm/mnlp/workspace/modeldata/mention/model/conf/mention.ddinf; model is SCGIS
+[ME::init:1] param file is /opt/ibm/mnlp/workspace/modeldata/mention/model/conf/memodel.ddinf, root is 
+[32m[ME::init][0m Running in test mode - will skip the loading of many structures
+[32m[ME::init][0m Will keep all features, no matter how small.
+[32m[FeatureGenerator::Open][0m, reading constraints from /opt/ibm/mnlp/workspace/modeldata/mention/model/conf/constraints.conf
+[32m[EventReader::openFilesForReading][0m history type file is /opt/ibm/mnlp/workspace/modeldata/mention/model/data/HistoryTypes.s
+Stream word read from file/opt/ibm/mnlp/workspace/tmp/mention/input.iob:1
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mfilter[0m [word_filter.ddinf]                          time:                  2[33mms[0m memory:      1[33mm[0m40[33mk[0m ->  [309[33mm[0m528[33mk[0m,135[33mm[0m212[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mextract_capitalization[0m [neflags.ddinf]              time:                  2[33mms[0m memory:         0[33mk[0m ->  [309[33mm[0m528[33mk[0m,135[33mm[0m212[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msuffix_prefix[0m [prefsuf.ddinf]                       time:                101[33mms[0m memory:         0[33mk[0m ->  [309[33mm[0m528[33mk[0m,135[33mm[0m212[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 39[33mms[0m memory:         0[33mk[0m ->  [309[33mm[0m528[33mk[0m,135[33mm[0m212[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mset_decorator[0m                                       time:                 31[33mms[0m memory:         0[33mk[0m ->  [309[33mm[0m528[33mk[0m,135[33mm[0m212[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mset_decorator[0m                                       time:                 22[33mms[0m memory:         0[33mk[0m ->  [309[33mm[0m528[33mk[0m,135[33mm[0m212[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 23[33mms[0m memory:         0[33mk[0m ->  [309[33mm[0m528[33mk[0m,135[33mm[0m212[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 23[33mms[0m memory:         0[33mk[0m ->  [309[33mm[0m528[33mk[0m,135[33mm[0m212[33mk[0m]
+The resulting flagSetMap contains 161201 elements.
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mdictionary_feature[0m [nedict.ddinf]                   time:           1[33mm[0m36[33ms[0m681[33mms[0m memory:     458[33mm[0m4[33mk[0m ->  [873[33mm[0m816[33mk[0m,593[33mm[0m216[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mcache_feature[0m [cache-feat.ddinf]                    time:                105[33mms[0m memory:         0[33mk[0m ->  [873[33mm[0m816[33mk[0m,593[33mm[0m216[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mtrigger_feature[0m [trigger.ddinf]                     time:                566[33mms[0m memory:         0[33mk[0m ->  [873[33mm[0m816[33mk[0m,593[33mm[0m216[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mlc[0m                                                  time:                 21[33mms[0m memory:         0[33mk[0m ->  [873[33mm[0m816[33mk[0m,593[33mm[0m216[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mfilter[0m [morph_filter.ddinf]                         time:                  5[33mms[0m memory:       304[33mk[0m ->  [873[33mm[0m816[33mk[0m,593[33mm[0m520[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 27[33mms[0m memory:         0[33mk[0m ->  [873[33mm[0m816[33mk[0m,593[33mm[0m520[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33midf[0m [idf.ddinf]                                     time:              3[33ms[0m294[33mms[0m memory:    65[33mm[0m996[33mk[0m ->  [890[33mm[0m168[33mk[0m,659[33mm[0m492[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33midf[0m [wlength.ddinf]                                 time:                119[33mms[0m memory:         0[33mk[0m ->  [890[33mm[0m168[33mk[0m,659[33mm[0m492[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mconcatenated_sequence_decorator[0m                     time:                 37[33mms[0m memory:         0[33mk[0m ->  [890[33mm[0m168[33mk[0m,659[33mm[0m492[33mk[0m]
+Result file in /opt/ibm/mnlp/workspace/tmp/mention/input.iob:2
+[[32mvoid __com_ibm_ykt_ikm_nls::MEModel::initModel[0m] The default classification is O
+[[32m__com_ibm_ykt_ikm_nls::FeatureManager::readFeatures[0m] Reading features from /opt/ibm/mnlp/workspace/modeldata/mention/model/data/f/modelSCGIS-300.latest
+[32m[FeatureGenerator::Read][0m Before reading features [890[33mm[0m168[33mk[0m,659[33mm[0m164[33mk[0m].
+[32m[FeatureGenerator::Read] [0m Sorting features [890[33mm[0m168[33mk[0m,669[33mm[0m808[33mk[0m].
+[32m[FeatureGenerator::Read][0m Read 193557 features : +0[33mk[0m/25[33mm[0m804[33mk[0m.
+[32m[FeatureGenerator::Read][0m dynamic history representation: +0[33mk[0m/528[33mk[0m.
+[32m[FeatureGenerator::Read][0m Read 193557 features, discarding 0 due to low alpha.
+[32m[FeatureGenerator::Read][0m After reading features [890[33mm[0m168[33mk[0m,695[33mm[0m424[33mk[0m].
+[32m[ME::setPrior][0m read ME model in 2 seconds, 46 milliseconds, mem +9[33mm[0m0[33mk[0m/35[33mm[0m964[33mk[0m.
+[32m[MEVitClassifier::initModel][0m MEVitClassifier initialized.
+[32m[MEVitClassifier2::initModel][0m model initialized.
+[32m[MentionDetectionEngine::init][0m Processing all regions
+[[32mvoid __ibm__nlp__::MentionDetectionEngine::init[0m] Postprocessor ddinf is 
+[32m[ACEEngine::init][0m Memory after loading mention engine [899[33mm[0m168[33mk[0m,695[33mm[0m444[33mk[0m].
+[[32m__ibm__nlp__::ACEEngine::init_base[0m] Mention detector loaded in 1[33mm[0m42[33ms[0m48[33mms[0m
+[32m[ACEEngine::init][0m init time is 102535
+[32m[ACEEngine::init][0m Models loaded.
+Runtime breakdown:
+Initialization:
+                      102.54 secs. (98.38%)
+Decoding on 4 threads:
+                            69        67        68        70   Average
+----------------------------------------------------------------------
+       Tokenization:   15957.6   13377.7   17697.1   15703.4   15684.0 ±1024.5
+           Mentions:    7576.8    7578.9    7713.6    7750.0    7654.8 ±52.0
+       Wasted time%:      22.0      13.8      17.8      19.0      18.2 ±1.9
+----------------------------------------------------------------------
+            Overall:    5137.5    4838.0    5372.1    5189.1    5134.2 ±127.9
+----------------------------------------------------------------------
+Overall time spent decoding: 23718 words in 1 second, 686 milliseconds
+Decoding speed: 14067.6 words/second, 3516.9 words/core-second.
+
+Memory used [899[33mm[0m172[33mk[0m,695[33mm[0m716[33mk[0m]
+There were 0 dynamic states constructed.

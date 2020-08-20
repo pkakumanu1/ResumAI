@@ -1,0 +1,778 @@
+Thu Aug 20 02:18:05 UTC 2020: batch apply parameters:
+Thu Aug 20 02:18:05 UTC 2020: SIRE_TRAIN_TEST_DATA_URI=s3://wksdata-pprd/wks/sire/evaluate/v3/tnxc5j44oz88yk30/7edab450-dc2e-11ea-bff2-05ea84f8fa50/evaluation_corpus.zip
+Thu Aug 20 02:18:05 UTC 2020: SIRE_TRAIN_MODEL_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/b33536a2-77a3-4a84-9574-d6016e2805c2/d02beffb-d990-46c0-829d-605168aee97b/model.zip
+Thu Aug 20 02:18:05 UTC 2020: SIRE_TRAIN_EVAL_RESULTS_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/batch_apply/b33536a2-77a3-4a84-9574-d6016e2805c2
+Thu Aug 20 02:18:05 UTC 2020: SIRE_TRAIN_LOGS_OUT_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/batch_apply/b33536a2-77a3-4a84-9574-d6016e2805c2
+Thu Aug 20 02:18:05 UTC 2020: SIRE_TRAIN_S3_ENDPOINT=https://s3-api.us-geo.objectstorage.service.networklayer.com
+Thu Aug 20 02:18:05 UTC 2020: SIRE_TRAIN_COS_PROFILE=tenant
+Thu Aug 20 02:18:05 UTC 2020: K8S_JOB_QUEUE_JOB_ID=ee9d1b90-2da0-468c-8c6c-3484b96c27c5
+Thu Aug 20 02:18:05 UTC 2020: export SIRE_TRAIN_TEST_DATA_URI=s3://wksdata-pprd/wks/sire/evaluate/v3/tnxc5j44oz88yk30/7edab450-dc2e-11ea-bff2-05ea84f8fa50/evaluation_corpus.zip;export SIRE_TRAIN_MODEL_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/b33536a2-77a3-4a84-9574-d6016e2805c2/d02beffb-d990-46c0-829d-605168aee97b/model.zip;export SIRE_TRAIN_EVAL_RESULTS_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/batch_apply/b33536a2-77a3-4a84-9574-d6016e2805c2;export SIRE_TRAIN_LOGS_OUT_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/batch_apply/b33536a2-77a3-4a84-9574-d6016e2805c2;exportSIRE_TRAIN_S3_ENDPOINT=https://s3-api.us-geo.objectstorage.service.networklayer.com;export SIRE_TRAIN_COS_PROFILE=tenant;export K8S_JOB_QUEUE_JOB_ID=ee9d1b90-2da0-468c-8c6c-3484b96c27c5
+Thu Aug 20 02:18:05 UTC 2020: downloading the test data from s3://wksdata-pprd/wks/sire/evaluate/v3/tnxc5j44oz88yk30/7edab450-dc2e-11ea-bff2-05ea84f8fa50/evaluation_corpus.zip
+Completed 256.0 KiB/778.9 KiB (2.0 MiB/s) with 1 file(s) remainingCompleted 512.0 KiB/778.9 KiB (3.9 MiB/s) with 1 file(s) remainingCompleted 768.0 KiB/778.9 KiB (5.7 MiB/s) with 1 file(s) remainingCompleted 778.9 KiB/778.9 KiB (5.8 MiB/s) with 1 file(s) remainingdownload: s3://wksdata-pprd/wks/sire/evaluate/v3/tnxc5j44oz88yk30/7edab450-dc2e-11ea-bff2-05ea84f8fa50/evaluation_corpus.zip to ./test_data.zip
+Thu Aug 20 02:18:05 UTC 2020: Unpacking evaluation corpus...
+Archive:  /opt/ibm/mnlp/workspace/test_data.zip
+   creating: text/
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-0.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-1.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-120.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-121.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-122.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-123.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-126.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-127.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-128.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-129.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-2.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-3.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-300.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-301.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-302.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-303.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-304.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-305.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-306.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-307.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-308.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-309.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-310.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-311.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-312.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-313.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-314.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-315.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-316.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-317.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-318.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-319.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-362.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-363.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-364.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-365.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-368.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-369.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-4.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-5.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-500.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-501.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-502.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-503.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-504.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-505.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-506.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-507.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-508.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-509.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-510.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-511.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-512.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-513.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-514.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-515.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-516.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-517.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-518.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-519.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-520.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-521.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-522.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-523.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-524.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-525.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-526.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-527.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-528.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-529.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-530.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-531.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-532.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-533.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-534.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-535.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-536.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-537.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-538.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-539.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-540.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-541.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-542.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-543.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-544.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-545.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-546.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-547.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-548.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-549.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-550.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-551.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-552.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-553.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-554.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-555.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-556.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-557.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-558.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-559.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-6.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-7.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-719.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-720.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-721.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-722.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-723.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-724.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-725.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-726.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-727.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-728.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-729.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-730.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-731.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-732.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-733.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-734.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-735.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-736.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-737.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-738.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-739.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-740.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-741.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-742.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-743.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-744.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-745.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-746.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-747.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-748.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-749.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-750.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-751.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-752.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-753.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-754.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-755.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-756.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-757.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-758.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-759.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-760.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-761.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-762.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-763.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-764.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-765.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-766.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-767.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-768.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-769.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-770.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-771.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-772.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-773.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-774.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-775.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-776.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-777.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-778.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-779.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-780.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-781.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-782.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-783.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-784.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-785.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-786.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-787.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-788.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-789.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-790.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-791.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-792.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-793.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-794.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-795.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-796.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-797.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-798.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-799.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-8.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-9.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-906.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-907.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-908.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-909.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-913.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-914.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-915.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-916.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-960.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-961.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-962.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-963.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-964.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-965.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-966.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-967.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-968.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-969.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-970.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-971.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-972.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-973.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-974.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-975.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-976.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-977.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-978.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-979.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-980.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-981.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-982.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-983.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-984.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-985.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-986.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-987.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-988.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-989.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-990.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-991.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-992.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-993.txt  
+  inflating: text/test-0738fa20-e196-11ea-ad38-db2547d07e33-994.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-700.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-701.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-702.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-703.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-704.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-705.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-706.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-707.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-708.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-709.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-710.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-711.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-712.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-713.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-714.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-715.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-716.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-717.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-718.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-900.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-901.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-902.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-903.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-904.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-905.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-910.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-911.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-912.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-917.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-918.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-919.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-920.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-921.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-922.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-923.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-924.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-925.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-926.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-927.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-928.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-929.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-930.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-931.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-932.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-933.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-934.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-935.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-936.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-937.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-938.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-939.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-940.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-941.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-942.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-943.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-944.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-945.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-946.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-947.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-948.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-949.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-950.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-951.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-952.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-953.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-954.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-955.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-956.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-957.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-958.txt  
+  inflating: text/blind-0738fa20-e196-11ea-ad38-db2547d07e33-959.txt  
+Thu Aug 20 02:18:05 UTC 2020: downloading the model from s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/b33536a2-77a3-4a84-9574-d6016e2805c2/d02beffb-d990-46c0-829d-605168aee97b/model.zip
+Completed 256.0 KiB/60.9 MiB (931.4 KiB/s) with 1 file(s) remainingCompleted 512.0 KiB/60.9 MiB (1.8 MiB/s) with 1 file(s) remaining  Completed 768.0 KiB/60.9 MiB (2.6 MiB/s) with 1 file(s) remaining  Completed 1.0 MiB/60.9 MiB (3.4 MiB/s) with 1 file(s) remaining    Completed 1.2 MiB/60.9 MiB (4.2 MiB/s) with 1 file(s) remaining    Completed 1.5 MiB/60.9 MiB (5.0 MiB/s) with 1 file(s) remaining    Completed 1.8 MiB/60.9 MiB (5.8 MiB/s) with 1 file(s) remaining    Completed 2.0 MiB/60.9 MiB (6.6 MiB/s) with 1 file(s) remaining    Completed 2.2 MiB/60.9 MiB (7.3 MiB/s) with 1 file(s) remaining    Completed 2.5 MiB/60.9 MiB (8.1 MiB/s) with 1 file(s) remaining    Completed 2.8 MiB/60.9 MiB (8.8 MiB/s) with 1 file(s) remaining    Completed 3.0 MiB/60.9 MiB (9.5 MiB/s) with 1 file(s) remaining    Completed 3.2 MiB/60.9 MiB (10.2 MiB/s) with 1 file(s) remaining   Completed 3.5 MiB/60.9 MiB (10.8 MiB/s) with 1 file(s) remaining   Completed 3.8 MiB/60.9 MiB (11.5 MiB/s) with 1 file(s) remaining   Completed 4.0 MiB/60.9 MiB (12.1 MiB/s) with 1 file(s) remaining   Completed 4.2 MiB/60.9 MiB (12.8 MiB/s) with 1 file(s) remaining   Completed 4.5 MiB/60.9 MiB (13.4 MiB/s) with 1 file(s) remaining   Completed 4.8 MiB/60.9 MiB (14.1 MiB/s) with 1 file(s) remaining   Completed 5.0 MiB/60.9 MiB (14.7 MiB/s) with 1 file(s) remaining   Completed 5.2 MiB/60.9 MiB (15.2 MiB/s) with 1 file(s) remaining   Completed 5.5 MiB/60.9 MiB (15.8 MiB/s) with 1 file(s) remaining   Completed 5.8 MiB/60.9 MiB (16.3 MiB/s) with 1 file(s) remaining   Completed 6.0 MiB/60.9 MiB (17.0 MiB/s) with 1 file(s) remaining   Completed 6.2 MiB/60.9 MiB (17.5 MiB/s) with 1 file(s) remaining   Completed 6.5 MiB/60.9 MiB (18.1 MiB/s) with 1 file(s) remaining   Completed 6.8 MiB/60.9 MiB (18.7 MiB/s) with 1 file(s) remaining   Completed 7.0 MiB/60.9 MiB (19.1 MiB/s) with 1 file(s) remaining   Completed 7.2 MiB/60.9 MiB (19.5 MiB/s) with 1 file(s) remaining   Completed 7.5 MiB/60.9 MiB (20.0 MiB/s) with 1 file(s) remaining   Completed 7.8 MiB/60.9 MiB (20.4 MiB/s) with 1 file(s) remaining   Completed 8.0 MiB/60.9 MiB (20.9 MiB/s) with 1 file(s) remaining   Completed 8.2 MiB/60.9 MiB (21.5 MiB/s) with 1 file(s) remaining   Completed 8.5 MiB/60.9 MiB (22.1 MiB/s) with 1 file(s) remaining   Completed 8.8 MiB/60.9 MiB (22.6 MiB/s) with 1 file(s) remaining   Completed 9.0 MiB/60.9 MiB (23.2 MiB/s) with 1 file(s) remaining   Completed 9.2 MiB/60.9 MiB (23.7 MiB/s) with 1 file(s) remaining   Completed 9.5 MiB/60.9 MiB (24.2 MiB/s) with 1 file(s) remaining   Completed 9.8 MiB/60.9 MiB (24.8 MiB/s) with 1 file(s) remaining   Completed 10.0 MiB/60.9 MiB (25.2 MiB/s) with 1 file(s) remaining  Completed 10.2 MiB/60.9 MiB (25.7 MiB/s) with 1 file(s) remaining  Completed 10.5 MiB/60.9 MiB (26.2 MiB/s) with 1 file(s) remaining  Completed 10.8 MiB/60.9 MiB (26.7 MiB/s) with 1 file(s) remaining  Completed 11.0 MiB/60.9 MiB (27.3 MiB/s) with 1 file(s) remaining  Completed 11.2 MiB/60.9 MiB (27.8 MiB/s) with 1 file(s) remaining  Completed 11.5 MiB/60.9 MiB (28.2 MiB/s) with 1 file(s) remaining  Completed 11.8 MiB/60.9 MiB (28.7 MiB/s) with 1 file(s) remaining  Completed 12.0 MiB/60.9 MiB (29.2 MiB/s) with 1 file(s) remaining  Completed 12.2 MiB/60.9 MiB (29.6 MiB/s) with 1 file(s) remaining  Completed 12.5 MiB/60.9 MiB (30.1 MiB/s) with 1 file(s) remaining  Completed 12.8 MiB/60.9 MiB (30.5 MiB/s) with 1 file(s) remaining  Completed 13.0 MiB/60.9 MiB (31.1 MiB/s) with 1 file(s) remaining  Completed 13.2 MiB/60.9 MiB (31.6 MiB/s) with 1 file(s) remaining  Completed 13.5 MiB/60.9 MiB (32.1 MiB/s) with 1 file(s) remaining  Completed 13.8 MiB/60.9 MiB (32.4 MiB/s) with 1 file(s) remaining  Completed 14.0 MiB/60.9 MiB (32.9 MiB/s) with 1 file(s) remaining  Completed 14.2 MiB/60.9 MiB (33.4 MiB/s) with 1 file(s) remaining  Completed 14.5 MiB/60.9 MiB (33.8 MiB/s) with 1 file(s) remaining  Completed 14.8 MiB/60.9 MiB (34.1 MiB/s) with 1 file(s) remaining  Completed 15.0 MiB/60.9 MiB (34.6 MiB/s) with 1 file(s) remaining  Completed 15.2 MiB/60.9 MiB (35.1 MiB/s) with 1 file(s) remaining  Completed 15.5 MiB/60.9 MiB (35.5 MiB/s) with 1 file(s) remaining  Completed 15.8 MiB/60.9 MiB (36.0 MiB/s) with 1 file(s) remaining  Completed 16.0 MiB/60.9 MiB (36.5 MiB/s) with 1 file(s) remaining  Completed 16.2 MiB/60.9 MiB (36.9 MiB/s) with 1 file(s) remaining  Completed 16.5 MiB/60.9 MiB (37.3 MiB/s) with 1 file(s) remaining  Completed 16.8 MiB/60.9 MiB (37.7 MiB/s) with 1 file(s) remaining  Completed 17.0 MiB/60.9 MiB (38.1 MiB/s) with 1 file(s) remaining  Completed 17.2 MiB/60.9 MiB (38.6 MiB/s) with 1 file(s) remaining  Completed 17.5 MiB/60.9 MiB (38.9 MiB/s) with 1 file(s) remaining  Completed 17.8 MiB/60.9 MiB (39.3 MiB/s) with 1 file(s) remaining  Completed 18.0 MiB/60.9 MiB (39.8 MiB/s) with 1 file(s) remaining  Completed 18.2 MiB/60.9 MiB (40.3 MiB/s) with 1 file(s) remaining  Completed 18.5 MiB/60.9 MiB (40.7 MiB/s) with 1 file(s) remaining  Completed 18.8 MiB/60.9 MiB (41.0 MiB/s) with 1 file(s) remaining  Completed 19.0 MiB/60.9 MiB (41.4 MiB/s) with 1 file(s) remaining  Completed 19.2 MiB/60.9 MiB (41.8 MiB/s) with 1 file(s) remaining  Completed 19.5 MiB/60.9 MiB (42.1 MiB/s) with 1 file(s) remaining  Completed 19.8 MiB/60.9 MiB (42.6 MiB/s) with 1 file(s) remaining  Completed 20.0 MiB/60.9 MiB (43.0 MiB/s) with 1 file(s) remaining  Completed 20.2 MiB/60.9 MiB (43.4 MiB/s) with 1 file(s) remaining  Completed 20.5 MiB/60.9 MiB (43.7 MiB/s) with 1 file(s) remaining  Completed 20.8 MiB/60.9 MiB (44.0 MiB/s) with 1 file(s) remaining  Completed 21.0 MiB/60.9 MiB (44.4 MiB/s) with 1 file(s) remaining  Completed 21.2 MiB/60.9 MiB (44.9 MiB/s) with 1 file(s) remaining  Completed 21.5 MiB/60.9 MiB (45.3 MiB/s) with 1 file(s) remaining  Completed 21.8 MiB/60.9 MiB (45.5 MiB/s) with 1 file(s) remaining  Completed 22.0 MiB/60.9 MiB (45.9 MiB/s) with 1 file(s) remaining  Completed 22.2 MiB/60.9 MiB (46.2 MiB/s) with 1 file(s) remaining  Completed 22.5 MiB/60.9 MiB (46.7 MiB/s) with 1 file(s) remaining  Completed 22.8 MiB/60.9 MiB (46.9 MiB/s) with 1 file(s) remaining  Completed 23.0 MiB/60.9 MiB (47.2 MiB/s) with 1 file(s) remaining  Completed 23.2 MiB/60.9 MiB (47.7 MiB/s) with 1 file(s) remaining  Completed 23.5 MiB/60.9 MiB (48.1 MiB/s) with 1 file(s) remaining  Completed 23.8 MiB/60.9 MiB (48.3 MiB/s) with 1 file(s) remaining  Completed 24.0 MiB/60.9 MiB (48.6 MiB/s) with 1 file(s) remaining  Completed 24.2 MiB/60.9 MiB (49.1 MiB/s) with 1 file(s) remaining  Completed 24.5 MiB/60.9 MiB (49.4 MiB/s) with 1 file(s) remaining  Completed 24.8 MiB/60.9 MiB (49.6 MiB/s) with 1 file(s) remaining  Completed 25.0 MiB/60.9 MiB (49.8 MiB/s) with 1 file(s) remaining  Completed 25.2 MiB/60.9 MiB (50.2 MiB/s) with 1 file(s) remaining  Completed 25.5 MiB/60.9 MiB (50.5 MiB/s) with 1 file(s) remaining  Completed 25.8 MiB/60.9 MiB (50.8 MiB/s) with 1 file(s) remaining  Completed 26.0 MiB/60.9 MiB (51.2 MiB/s) with 1 file(s) remaining  Completed 26.2 MiB/60.9 MiB (51.6 MiB/s) with 1 file(s) remaining  Completed 26.5 MiB/60.9 MiB (52.0 MiB/s) with 1 file(s) remaining  Completed 26.8 MiB/60.9 MiB (52.0 MiB/s) with 1 file(s) remaining  Completed 27.0 MiB/60.9 MiB (52.5 MiB/s) with 1 file(s) remaining  Completed 27.2 MiB/60.9 MiB (52.8 MiB/s) with 1 file(s) remaining  Completed 27.5 MiB/60.9 MiB (53.1 MiB/s) with 1 file(s) remaining  Completed 27.8 MiB/60.9 MiB (53.5 MiB/s) with 1 file(s) remaining  Completed 28.0 MiB/60.9 MiB (53.8 MiB/s) with 1 file(s) remaining  Completed 28.2 MiB/60.9 MiB (54.1 MiB/s) with 1 file(s) remaining  Completed 28.5 MiB/60.9 MiB (54.3 MiB/s) with 1 file(s) remaining  Completed 28.8 MiB/60.9 MiB (54.5 MiB/s) with 1 file(s) remaining  Completed 29.0 MiB/60.9 MiB (54.9 MiB/s) with 1 file(s) remaining  Completed 29.2 MiB/60.9 MiB (55.2 MiB/s) with 1 file(s) remaining  Completed 29.5 MiB/60.9 MiB (55.6 MiB/s) with 1 file(s) remaining  Completed 29.8 MiB/60.9 MiB (55.9 MiB/s) with 1 file(s) remaining  Completed 30.0 MiB/60.9 MiB (56.1 MiB/s) with 1 file(s) remaining  Completed 30.2 MiB/60.9 MiB (56.5 MiB/s) with 1 file(s) remaining  Completed 30.5 MiB/60.9 MiB (56.7 MiB/s) with 1 file(s) remaining  Completed 30.8 MiB/60.9 MiB (56.9 MiB/s) with 1 file(s) remaining  Completed 31.0 MiB/60.9 MiB (57.3 MiB/s) with 1 file(s) remaining  Completed 31.2 MiB/60.9 MiB (57.5 MiB/s) with 1 file(s) remaining  Completed 31.5 MiB/60.9 MiB (57.8 MiB/s) with 1 file(s) remaining  Completed 31.8 MiB/60.9 MiB (58.0 MiB/s) with 1 file(s) remaining  Completed 32.0 MiB/60.9 MiB (58.3 MiB/s) with 1 file(s) remaining  Completed 32.2 MiB/60.9 MiB (58.7 MiB/s) with 1 file(s) remaining  Completed 32.5 MiB/60.9 MiB (58.9 MiB/s) with 1 file(s) remaining  Completed 32.8 MiB/60.9 MiB (59.1 MiB/s) with 1 file(s) remaining  Completed 33.0 MiB/60.9 MiB (59.3 MiB/s) with 1 file(s) remaining  Completed 33.2 MiB/60.9 MiB (59.6 MiB/s) with 1 file(s) remaining  Completed 33.5 MiB/60.9 MiB (59.9 MiB/s) with 1 file(s) remaining  Completed 33.8 MiB/60.9 MiB (60.2 MiB/s) with 1 file(s) remaining  Completed 34.0 MiB/60.9 MiB (60.4 MiB/s) with 1 file(s) remaining  Completed 34.2 MiB/60.9 MiB (60.8 MiB/s) with 1 file(s) remaining  Completed 34.5 MiB/60.9 MiB (60.9 MiB/s) with 1 file(s) remaining  Completed 34.8 MiB/60.9 MiB (61.2 MiB/s) with 1 file(s) remaining  Completed 35.0 MiB/60.9 MiB (61.3 MiB/s) with 1 file(s) remaining  Completed 35.2 MiB/60.9 MiB (61.7 MiB/s) with 1 file(s) remaining  Completed 35.5 MiB/60.9 MiB (61.9 MiB/s) with 1 file(s) remaining  Completed 35.8 MiB/60.9 MiB (62.3 MiB/s) with 1 file(s) remaining  Completed 36.0 MiB/60.9 MiB (62.5 MiB/s) with 1 file(s) remaining  Completed 36.2 MiB/60.9 MiB (62.9 MiB/s) with 1 file(s) remaining  Completed 36.5 MiB/60.9 MiB (63.2 MiB/s) with 1 file(s) remaining  Completed 36.8 MiB/60.9 MiB (63.3 MiB/s) with 1 file(s) remaining  Completed 37.0 MiB/60.9 MiB (63.5 MiB/s) with 1 file(s) remaining  Completed 37.2 MiB/60.9 MiB (63.9 MiB/s) with 1 file(s) remaining  Completed 37.5 MiB/60.9 MiB (64.3 MiB/s) with 1 file(s) remaining  Completed 37.8 MiB/60.9 MiB (64.6 MiB/s) with 1 file(s) remaining  Completed 38.0 MiB/60.9 MiB (64.9 MiB/s) with 1 file(s) remaining  Completed 38.2 MiB/60.9 MiB (65.1 MiB/s) with 1 file(s) remaining  Completed 38.5 MiB/60.9 MiB (65.4 MiB/s) with 1 file(s) remaining  Completed 38.8 MiB/60.9 MiB (65.6 MiB/s) with 1 file(s) remaining  Completed 39.0 MiB/60.9 MiB (65.9 MiB/s) with 1 file(s) remaining  Completed 39.2 MiB/60.9 MiB (66.2 MiB/s) with 1 file(s) remaining  Completed 39.5 MiB/60.9 MiB (66.5 MiB/s) with 1 file(s) remaining  Completed 39.8 MiB/60.9 MiB (66.8 MiB/s) with 1 file(s) remaining  Completed 40.0 MiB/60.9 MiB (67.1 MiB/s) with 1 file(s) remaining  Completed 40.2 MiB/60.9 MiB (67.2 MiB/s) with 1 file(s) remaining  Completed 40.5 MiB/60.9 MiB (67.5 MiB/s) with 1 file(s) remaining  Completed 40.8 MiB/60.9 MiB (67.7 MiB/s) with 1 file(s) remaining  Completed 41.0 MiB/60.9 MiB (68.0 MiB/s) with 1 file(s) remaining  Completed 41.2 MiB/60.9 MiB (68.4 MiB/s) with 1 file(s) remaining  Completed 41.5 MiB/60.9 MiB (68.7 MiB/s) with 1 file(s) remaining  Completed 41.8 MiB/60.9 MiB (68.9 MiB/s) with 1 file(s) remaining  Completed 42.0 MiB/60.9 MiB (68.9 MiB/s) with 1 file(s) remaining  Completed 42.2 MiB/60.9 MiB (69.1 MiB/s) with 1 file(s) remaining  Completed 42.5 MiB/60.9 MiB (69.4 MiB/s) with 1 file(s) remaining  Completed 42.8 MiB/60.9 MiB (69.7 MiB/s) with 1 file(s) remaining  Completed 43.0 MiB/60.9 MiB (69.9 MiB/s) with 1 file(s) remaining  Completed 43.2 MiB/60.9 MiB (70.3 MiB/s) with 1 file(s) remaining  Completed 43.5 MiB/60.9 MiB (70.2 MiB/s) with 1 file(s) remaining  Completed 43.8 MiB/60.9 MiB (70.5 MiB/s) with 1 file(s) remaining  Completed 44.0 MiB/60.9 MiB (70.8 MiB/s) with 1 file(s) remaining  Completed 44.2 MiB/60.9 MiB (71.1 MiB/s) with 1 file(s) remaining  Completed 44.5 MiB/60.9 MiB (71.4 MiB/s) with 1 file(s) remaining  Completed 44.8 MiB/60.9 MiB (71.7 MiB/s) with 1 file(s) remaining  Completed 45.0 MiB/60.9 MiB (72.0 MiB/s) with 1 file(s) remaining  Completed 45.2 MiB/60.9 MiB (72.0 MiB/s) with 1 file(s) remaining  Completed 45.4 MiB/60.9 MiB (72.1 MiB/s) with 1 file(s) remaining  Completed 45.7 MiB/60.9 MiB (72.4 MiB/s) with 1 file(s) remaining  Completed 45.9 MiB/60.9 MiB (72.7 MiB/s) with 1 file(s) remaining  Completed 46.2 MiB/60.9 MiB (73.0 MiB/s) with 1 file(s) remaining  Completed 46.4 MiB/60.9 MiB (73.3 MiB/s) with 1 file(s) remaining  Completed 46.7 MiB/60.9 MiB (73.6 MiB/s) with 1 file(s) remaining  Completed 46.9 MiB/60.9 MiB (73.7 MiB/s) with 1 file(s) remaining  Completed 47.2 MiB/60.9 MiB (74.1 MiB/s) with 1 file(s) remaining  Completed 47.4 MiB/60.9 MiB (74.3 MiB/s) with 1 file(s) remaining  Completed 47.7 MiB/60.9 MiB (74.6 MiB/s) with 1 file(s) remaining  Completed 47.9 MiB/60.9 MiB (74.6 MiB/s) with 1 file(s) remaining  Completed 48.2 MiB/60.9 MiB (74.9 MiB/s) with 1 file(s) remaining  Completed 48.4 MiB/60.9 MiB (75.3 MiB/s) with 1 file(s) remaining  Completed 48.7 MiB/60.9 MiB (75.5 MiB/s) with 1 file(s) remaining  Completed 48.9 MiB/60.9 MiB (75.7 MiB/s) with 1 file(s) remaining  Completed 49.2 MiB/60.9 MiB (75.9 MiB/s) with 1 file(s) remaining  Completed 49.4 MiB/60.9 MiB (76.1 MiB/s) with 1 file(s) remaining  Completed 49.7 MiB/60.9 MiB (76.3 MiB/s) with 1 file(s) remaining  Completed 49.9 MiB/60.9 MiB (76.6 MiB/s) with 1 file(s) remaining  Completed 50.2 MiB/60.9 MiB (76.9 MiB/s) with 1 file(s) remaining  Completed 50.4 MiB/60.9 MiB (77.0 MiB/s) with 1 file(s) remaining  Completed 50.7 MiB/60.9 MiB (77.3 MiB/s) with 1 file(s) remaining  Completed 50.9 MiB/60.9 MiB (77.5 MiB/s) with 1 file(s) remaining  Completed 51.2 MiB/60.9 MiB (77.6 MiB/s) with 1 file(s) remaining  Completed 51.4 MiB/60.9 MiB (77.9 MiB/s) with 1 file(s) remaining  Completed 51.7 MiB/60.9 MiB (78.2 MiB/s) with 1 file(s) remaining  Completed 51.9 MiB/60.9 MiB (78.4 MiB/s) with 1 file(s) remaining  Completed 52.2 MiB/60.9 MiB (78.6 MiB/s) with 1 file(s) remaining  Completed 52.4 MiB/60.9 MiB (78.6 MiB/s) with 1 file(s) remaining  Completed 52.7 MiB/60.9 MiB (78.9 MiB/s) with 1 file(s) remaining  Completed 52.9 MiB/60.9 MiB (79.2 MiB/s) with 1 file(s) remaining  Completed 53.2 MiB/60.9 MiB (79.5 MiB/s) with 1 file(s) remaining  Completed 53.4 MiB/60.9 MiB (79.7 MiB/s) with 1 file(s) remaining  Completed 53.7 MiB/60.9 MiB (79.8 MiB/s) with 1 file(s) remaining  Completed 53.9 MiB/60.9 MiB (79.9 MiB/s) with 1 file(s) remaining  Completed 54.2 MiB/60.9 MiB (80.2 MiB/s) with 1 file(s) remaining  Completed 54.4 MiB/60.9 MiB (80.4 MiB/s) with 1 file(s) remaining  Completed 54.7 MiB/60.9 MiB (80.7 MiB/s) with 1 file(s) remaining  Completed 54.9 MiB/60.9 MiB (80.9 MiB/s) with 1 file(s) remaining  Completed 55.2 MiB/60.9 MiB (81.0 MiB/s) with 1 file(s) remaining  Completed 55.4 MiB/60.9 MiB (81.2 MiB/s) with 1 file(s) remaining  Completed 55.7 MiB/60.9 MiB (81.5 MiB/s) with 1 file(s) remaining  Completed 55.9 MiB/60.9 MiB (81.7 MiB/s) with 1 file(s) remaining  Completed 56.2 MiB/60.9 MiB (82.0 MiB/s) with 1 file(s) remaining  Completed 56.4 MiB/60.9 MiB (82.0 MiB/s) with 1 file(s) remaining  Completed 56.7 MiB/60.9 MiB (82.3 MiB/s) with 1 file(s) remaining  Completed 56.9 MiB/60.9 MiB (82.6 MiB/s) with 1 file(s) remaining  Completed 57.2 MiB/60.9 MiB (82.9 MiB/s) with 1 file(s) remaining  Completed 57.4 MiB/60.9 MiB (83.0 MiB/s) with 1 file(s) remaining  Completed 57.7 MiB/60.9 MiB (83.2 MiB/s) with 1 file(s) remaining  Completed 57.9 MiB/60.9 MiB (83.4 MiB/s) with 1 file(s) remaining  Completed 58.2 MiB/60.9 MiB (83.7 MiB/s) with 1 file(s) remaining  Completed 58.4 MiB/60.9 MiB (83.9 MiB/s) with 1 file(s) remaining  Completed 58.7 MiB/60.9 MiB (84.1 MiB/s) with 1 file(s) remaining  Completed 58.9 MiB/60.9 MiB (84.4 MiB/s) with 1 file(s) remaining  Completed 59.2 MiB/60.9 MiB (84.6 MiB/s) with 1 file(s) remaining  Completed 59.4 MiB/60.9 MiB (84.7 MiB/s) with 1 file(s) remaining  Completed 59.7 MiB/60.9 MiB (85.0 MiB/s) with 1 file(s) remaining  Completed 59.9 MiB/60.9 MiB (85.3 MiB/s) with 1 file(s) remaining  Completed 60.2 MiB/60.9 MiB (85.4 MiB/s) with 1 file(s) remaining  Completed 60.4 MiB/60.9 MiB (85.3 MiB/s) with 1 file(s) remaining  Completed 60.7 MiB/60.9 MiB (85.3 MiB/s) with 1 file(s) remaining  Completed 60.9 MiB/60.9 MiB (85.3 MiB/s) with 1 file(s) remaining  download: s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/b33536a2-77a3-4a84-9574-d6016e2805c2/d02beffb-d990-46c0-829d-605168aee97b/model.zip to ./model.zip
+Thu Aug 20 02:18:07 UTC 2020: Unpacking model...
+Archive:  /opt/ibm/mnlp/workspace/model.zip
+   creating: modeldata/
+   creating: modeldata/tokenizer/
+   creating: modeldata/tokenizer/ml29-en/
+   creating: modeldata/tokenizer/ml29-en/data/
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.modified.sorted.orig  
+  inflating: modeldata/tokenizer/ml29-en/data/tags.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.orig  
+  inflating: modeldata/tokenizer/ml29-en/data/period.dictionary  
+  inflating: modeldata/tokenizer/ml29-en/data/charclasser.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/postproc.rls.save  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.withNum.suffix.edited  
+  inflating: modeldata/tokenizer/ml29-en/data/README.hyph  
+ extracting: modeldata/tokenizer/ml29-en/data/eos.conf  
+ extracting: modeldata/tokenizer/ml29-en/data/punctuation.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/spells  
+  inflating: modeldata/tokenizer/ml29-en/data/re_segmenter  
+  inflating: modeldata/tokenizer/ml29-en/data/abbr.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/tbl.train.voc  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt  
+  inflating: modeldata/tokenizer/ml29-en/data/punctuation.lexicon  
+  inflating: modeldata/tokenizer/ml29-en/data/postproc.rls  
+  inflating: modeldata/tokenizer/ml29-en/data/tbl.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.modified.orig  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.difference  
+  inflating: modeldata/tokenizer/ml29-en/data/spells.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/postproc.rls.old  
+  inflating: modeldata/tokenizer/ml29-en/data/period.dictionary.clean  
+  inflating: modeldata/tokenizer/ml29-en/data/output.rls  
+ extracting: modeldata/tokenizer/ml29-en/data/break_on_punctuation.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/hyphclasser.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.modified  
+  inflating: modeldata/tokenizer/ml29-en/data/vocs.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.orig.sorted  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.modified.sorted  
+  inflating: modeldata/tokenizer/ml29-en/data/hyph.freq.txt.withNum.suffix  
+  inflating: modeldata/tokenizer/ml29-en/data/rule.templ  
+  inflating: modeldata/tokenizer/ml29-en/data/sent_boundary.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/capitalization.conf  
+  inflating: modeldata/tokenizer/ml29-en/data/fileX.templ  
+  inflating: modeldata/tokenizer/ml29-en/data/logfile  
+   creating: modeldata/tokenizer/ml29-en/conf/
+  inflating: modeldata/tokenizer/ml29-en/conf/tokenizer.ddinf  
+  inflating: modeldata/tokenizer/ml29-en/conf/tokenizer_regionclassifier.ddinf.NOT_IN_SVN  
+   creating: modeldata/wks/
+   creating: modeldata/wks/metadata/
+  inflating: modeldata/wks/metadata/wksModelDescriptor.xml  
+  inflating: modeldata/wks/metadata/wksTypeDescriptor.xml  
+  inflating: modeldata/wks/metadata/wksProjectDescriptor.xml  
+   creating: modeldata/mention/
+   creating: modeldata/mention/model/
+   creating: modeldata/mention/model/data/
+  inflating: modeldata/mention/model/data/train.dict  
+  inflating: modeldata/mention/model/data/VIT_MACHINE  
+  inflating: modeldata/mention/model/data/train.classif  
+  inflating: modeldata/mention/model/data/train.flags  
+  inflating: modeldata/mention/model/data/FutureCounts.traindata  
+  inflating: modeldata/mention/model/data/train.classif.all  
+ extracting: modeldata/mention/model/data/Futures  
+  inflating: modeldata/mention/model/data/words.voc  
+  inflating: modeldata/mention/model/data/morphs.voc  
+   creating: modeldata/mention/model/data/ddinf/
+   creating: modeldata/mention/model/data/data/
+  inflating: modeldata/mention/model/data/train.flags_l  
+  inflating: modeldata/mention/model/data/train.morphs  
+  inflating: modeldata/mention/model/data/HistoryTypes.s  
+  inflating: modeldata/mention/model/data/netriggers.all  
+  inflating: modeldata/mention/model/data/FutureTypes.tr  
+  inflating: modeldata/mention/model/data/train.flags_r  
+  inflating: modeldata/mention/model/data/train.words_r  
+  inflating: modeldata/mention/model/data/train.triggers  
+  inflating: modeldata/mention/model/data/train.word  
+  inflating: modeldata/mention/model/data/train.lword  
+  inflating: modeldata/mention/model/data/HistoryTypes.tr  
+  inflating: modeldata/mention/model/data/train.fwrd  
+  inflating: modeldata/mention/model/data/train.wLength  
+  inflating: modeldata/mention/model/data/train.suffpref  
+  inflating: modeldata/mention/model/data/train.words_l  
+  inflating: modeldata/mention/model/data/train.idf  
+  inflating: modeldata/mention/model/data/FutureCounts  
+   creating: modeldata/mention/model/data/lists/
+  inflating: modeldata/mention/model/data/lists/dict5  
+  inflating: modeldata/mention/model/data/lists/dict11  
+  inflating: modeldata/mention/model/data/lists/wks_ProgrammingLanguages  
+  inflating: modeldata/mention/model/data/lists/wks_EducationLevel  
+ extracting: modeldata/mention/model/data/lists/idf_bins  
+  inflating: modeldata/mention/model/data/lists/dict1  
+  inflating: modeldata/mention/model/data/lists/wks_TechnicalSkill  
+  inflating: modeldata/mention/model/data/lists/dict12  
+  inflating: modeldata/mention/model/data/lists/dict7  
+  inflating: modeldata/mention/model/data/lists/morph-o-map  
+  inflating: modeldata/mention/model/data/lists/dict3  
+  inflating: modeldata/mention/model/data/lists/wiki-names.db  
+  inflating: modeldata/mention/model/data/lists/dict.x  
+  inflating: modeldata/mention/model/data/lists/terrorist-per.dat  
+  inflating: modeldata/mention/model/data/lists/train.lexicon  
+  inflating: modeldata/mention/model/data/lists/stopwords.dat  
+  inflating: modeldata/mention/model/data/lists/dict9  
+  inflating: modeldata/mention/model/data/lists/wks_Location  
+  inflating: modeldata/mention/model/data/lists/wks_JobFunction  
+  inflating: modeldata/mention/model/data/lists/hmm.flags  
+  inflating: modeldata/mention/model/data/lists/dict8  
+  inflating: modeldata/mention/model/data/lists/dict13  
+  inflating: modeldata/mention/model/data/lists/tac-kbp.2010.entities.dat  
+  inflating: modeldata/mention/model/data/lists/dict2  
+  inflating: modeldata/mention/model/data/lists/galey2.kdd.dict  
+  inflating: modeldata/mention/model/data/lists/terrorist_orgs.dat  
+  inflating: modeldata/mention/model/data/lists/fortune500.dat  
+  inflating: modeldata/mention/model/data/lists/fortune500.dat_2  
+  inflating: modeldata/mention/model/data/lists/dict6  
+ extracting: modeldata/mention/model/data/lists/foo  
+  inflating: modeldata/mention/model/data/lists/dict14  
+  inflating: modeldata/mention/model/data/lists/wks_ProfessionalCertifications  
+  inflating: modeldata/mention/model/data/lists/dict3a  
+  inflating: modeldata/mention/model/data/lists/train.lexicon.short  
+  inflating: modeldata/mention/model/data/lists/dict4  
+  inflating: modeldata/mention/model/data/lists/dict14_2  
+  inflating: modeldata/mention/model/data/lists/abb_5  
+  inflating: modeldata/mention/model/data/lists/terrorist_orgs_new.dat  
+ extracting: modeldata/mention/model/data/lists/wordLengthBins  
+  inflating: modeldata/mention/model/data/lists/tac-kbp.unsup.mentions.tok  
+  inflating: modeldata/mention/model/data/lists/dict10  
+ extracting: modeldata/mention/model/data/FutureTypes.s  
+  inflating: modeldata/mention/model/data/train.docArgs  
+   creating: modeldata/mention/model/data/f/
+  inflating: modeldata/mention/model/data/f/modelSCGIS-300.latest  
+ extracting: modeldata/mention/model/data/empty  
+   creating: modeldata/mention/model/conf/
+  inflating: modeldata/mention/model/conf/maxent.ddinf  
+  inflating: modeldata/mention/model/conf/trigger.ddinf  
+  inflating: modeldata/mention/model/conf/neflags.ddinf  
+  inflating: modeldata/mention/model/conf/prefsuf.ddinf  
+ extracting: modeldata/mention/model/conf/word_filter.ddinf  
+  inflating: modeldata/mention/model/conf/trigger.conf  
+  inflating: modeldata/mention/model/conf/FeatureTypes  
+  inflating: modeldata/mention/model/conf/features.conf  
+  inflating: modeldata/mention/model/conf/nedict.conf  
+  inflating: modeldata/mention/model/conf/mention.ddinf  
+ extracting: modeldata/mention/model/conf/wordLenghtBins.conf  
+  inflating: modeldata/mention/model/conf/memodel.ddinf  
+  inflating: modeldata/mention/model/conf/scale.ddinf  
+  inflating: modeldata/mention/model/conf/data_parser.ddinf  
+  inflating: modeldata/mention/model/conf/idf.ddinf  
+  inflating: modeldata/mention/model/conf/neflags.conf  
+  inflating: modeldata/mention/model/conf/constraints.conf  
+  inflating: modeldata/mention/model/conf/nedict.ddinf  
+  inflating: modeldata/mention/model/conf/nedict.short.conf  
+  inflating: modeldata/mention/model/conf/wlength.ddinf  
+  inflating: modeldata/mention/model/conf/decode.ddinf  
+ extracting: modeldata/mention/model/conf/morph_filter.ddinf  
+ extracting: modeldata/mention/model/conf/cache-feat.ddinf  
+  inflating: modeldata/mention/model/conf/lemma.ddinf  
+  inflating: modeldata/decode.ddinf  
+  inflating: modeldata/nameslist.lst  
+  inflating: modeldata/tponly.ddinf  
+Thu Aug 20 02:18:09 UTC 2020: creating list of input files
+Thu Aug 20 02:18:09 UTC 2020: found 299 input files
+Thu Aug 20 02:18:09 UTC 2020: /opt/ibm/mnlp/bin/x86_64/opt/driverN -r /opt/ibm/mnlp/workspace -i /opt/ibm/mnlp/workspace/input_file_listing.fof -c /opt/ibm/mnlp/workspace/modeldata/decode.ddinf -l '' -n 4
+  adding: docxml/ (stored 0%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-912.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-775.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-719.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-742.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-3.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-508.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-120.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-949.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-709.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-973.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-722.txt.docxml (deflated 79%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-941.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-306.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-786.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-5.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-950.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-948.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-717.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-992.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-556.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-967.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-540.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-764.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-784.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-700.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-309.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-962.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-746.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-4.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-311.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-312.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-776.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-750.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-759.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-533.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-310.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-930.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-761.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-766.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-754.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-741.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-905.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-932.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-547.txt.docxml (deflated 79%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-558.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-536.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-977.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-523.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-707.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-737.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-923.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-789.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-988.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-989.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-718.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-513.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-721.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-318.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-774.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-744.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-981.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-790.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-953.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-901.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-788.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-507.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-747.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-978.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-518.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-731.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-926.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-122.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-767.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-519.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-959.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-777.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-956.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-740.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-971.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-979.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-964.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-1.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-510.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-527.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-0.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-365.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-902.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-129.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-757.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-976.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-362.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-538.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-909.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-515.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-363.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-369.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-557.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-543.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-942.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-928.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-504.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-531.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-938.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-752.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-991.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-793.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-922.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-525.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-994.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-703.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-308.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-768.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-980.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-730.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-961.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-522.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-966.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-521.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-704.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-711.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-127.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-990.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-541.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-753.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-916.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-779.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-706.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-305.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-751.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-517.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-920.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-738.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-548.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-935.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-937.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-528.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-725.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-933.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-304.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-911.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-969.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-727.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-705.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-549.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-798.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-915.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-714.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-769.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-551.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-955.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-368.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-713.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-940.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-771.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-300.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-545.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-985.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-970.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-762.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-778.txt.docxml (deflated 78%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-934.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-987.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-924.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-986.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-944.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-555.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-968.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-927.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-758.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-984.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-9.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-537.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-931.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-701.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-913.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-739.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-314.txt.docxml (deflated 79%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-506.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-544.txt.docxml (deflated 83%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-756.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-939.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-906.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-553.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-516.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-735.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-716.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-529.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-765.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-797.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-947.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-951.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-918.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-773.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-550.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-745.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-554.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-715.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-123.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-534.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-539.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-787.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-946.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-542.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-919.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-511.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-794.txt.docxml (deflated 79%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-7.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-954.txt.docxml (deflated 83%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-726.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-502.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-993.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-520.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-917.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-799.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-364.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-307.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-972.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-505.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-514.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-796.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-712.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-708.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-749.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-500.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-925.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-503.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-974.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-792.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-524.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-702.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-907.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-958.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-760.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-126.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-945.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-301.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-6.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-921.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-965.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-960.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-316.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-512.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-8.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-982.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-532.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-732.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-936.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-315.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-781.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-546.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-795.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-723.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-743.txt.docxml (deflated 80%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-903.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-791.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-904.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-983.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-910.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-733.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-552.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-957.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-128.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-526.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-914.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-734.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-720.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-736.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-929.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-501.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-755.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-559.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-772.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-535.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-728.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-908.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-748.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-963.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-303.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-782.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-121.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-785.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-317.txt.docxml (deflated 80%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-783.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-2.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-710.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-780.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-975.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-509.txt.docxml (deflated 82%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-900.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-530.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-943.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-724.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-302.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-770.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-313.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-729.txt.docxml (deflated 81%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-319.txt.docxml (deflated 81%)
+  adding: docxml/blind-0738fa20-e196-11ea-ad38-db2547d07e33-952.txt.docxml (deflated 82%)
+  adding: docxml/test-0738fa20-e196-11ea-ad38-db2547d07e33-763.txt.docxml (deflated 81%)
+Thu Aug 20 02:19:28 UTC 2020: successfully packaged test results
+Thu Aug 20 02:19:28 UTC 2020: uploading test results to s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/batch_apply/b33536a2-77a3-4a84-9574-d6016e2805c2/ee9d1b90-2da0-468c-8c6c-3484b96c27c5/batch_apply_results.zip
+Completed 256.0 KiB/4.9 MiB (2.7 MiB/s) with 1 file(s) remainingCompleted 512.0 KiB/4.9 MiB (4.8 MiB/s) with 1 file(s) remainingCompleted 768.0 KiB/4.9 MiB (6.5 MiB/s) with 1 file(s) remainingCompleted 1.0 MiB/4.9 MiB (8.2 MiB/s) with 1 file(s) remaining  Completed 1.2 MiB/4.9 MiB (9.9 MiB/s) with 1 file(s) remaining  Completed 1.5 MiB/4.9 MiB (11.4 MiB/s) with 1 file(s) remaining Completed 1.8 MiB/4.9 MiB (12.8 MiB/s) with 1 file(s) remaining Completed 2.0 MiB/4.9 MiB (14.3 MiB/s) with 1 file(s) remaining Completed 2.2 MiB/4.9 MiB (15.7 MiB/s) with 1 file(s) remaining Completed 2.5 MiB/4.9 MiB (17.0 MiB/s) with 1 file(s) remaining Completed 2.8 MiB/4.9 MiB (18.3 MiB/s) with 1 file(s) remaining Completed 3.0 MiB/4.9 MiB (19.7 MiB/s) with 1 file(s) remaining Completed 3.2 MiB/4.9 MiB (20.9 MiB/s) with 1 file(s) remaining Completed 3.5 MiB/4.9 MiB (22.2 MiB/s) with 1 file(s) remaining Completed 3.8 MiB/4.9 MiB (23.5 MiB/s) with 1 file(s) remaining Completed 4.0 MiB/4.9 MiB (24.7 MiB/s) with 1 file(s) remaining Completed 4.2 MiB/4.9 MiB (25.8 MiB/s) with 1 file(s) remaining Completed 4.5 MiB/4.9 MiB (27.0 MiB/s) with 1 file(s) remaining Completed 4.8 MiB/4.9 MiB (28.2 MiB/s) with 1 file(s) remaining Completed 4.9 MiB/4.9 MiB (8.8 MiB/s) with 1 file(s) remaining  upload: ./batch_apply_results.zip to s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/batch_apply/b33536a2-77a3-4a84-9574-d6016e2805c2/ee9d1b90-2da0-468c-8c6c-3484b96c27c5/batch_apply_results.zip
+Thu Aug 20 02:19:29 UTC 2020: successfully uploaded test results
