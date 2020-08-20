@@ -1,0 +1,739 @@
+Input file is /opt/ibm/mnlp/workspace/input_file_listing.fof
+Temporary directory is /opt/ibm/mnlp/workspace/tmp/mention
+Using complete labels in training
+Skipping copying of model
++ '[' '!' -d /opt/ibm/mnlp/workspace/tmp/mention ']'
++ '[' NO = YES ']'
++ JSON_LOG_FILE=
++ JSON_LOG_OPTION=
++ '[' -z /opt/ibm/mnlp/workspace/input_file_listing.fof -o -z model ']'
++ '[' -e /opt/ibm/mnlp/templates/mention/model -a YES = NO ']'
++ TEMPLATE=/opt/ibm/mnlp/workspace/template/mention/en_klue2
++ '[' '!' -d /opt/ibm/mnlp/workspace/template/mention/en_klue2 ']'
++ [[ /opt/ibm/mnlp/workspace/input_file_listing.fof != /* ]]
++ checkError 'Bad input filepath.' 'The specified file was /opt/ibm/mnlp/workspace/input_file_listing.fof' 'readlink -e "/opt/ibm/mnlp/workspace/input_file_listing.fof"'
++ EXIT_CODE=0
++ ERR_TITLE='Bad input filepath.'
++ ERR_DESCP='The specified file was /opt/ibm/mnlp/workspace/input_file_listing.fof'
++ ERR_CMD='readlink -e "/opt/ibm/mnlp/workspace/input_file_listing.fof"'
++ '[' 0 -ne 0 ']'
+++ pwd
++ CURR_DIR=/opt/ibm/mnlp/workspace
++ '[' '!' -d /opt/ibm/mnlp/workspace/tmp/mention ']'
++ case $INPUT_FILE in
++ verifyFof /opt/ibm/mnlp/workspace/input_file_listing.fof
++ '[' '!' -f /opt/ibm/mnlp/workspace/input_file_listing.fof ']'
+++ cat /opt/ibm/mnlp/workspace/input_file_listing.fof
++ local 'FILES=/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-0.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-1.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-2.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-3.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-4.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-5.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-6.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-7.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-8.docxml
+/opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-9.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-0.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-10.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-11.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-12.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-13.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-14.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-15.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-16.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-17.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-18.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-19.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-1.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-20.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-21.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-26.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-27.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-28.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-29.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-2.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-30.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-31.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-32.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-33.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-34.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-35.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-36.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-37.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-38.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-39.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-3.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-40.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-41.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-42.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-43.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-44.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-45.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-46.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-47.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-48.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-49.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-50.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-51.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-52.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-53.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-54.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-55.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-56.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-57.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-58.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-59.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-60.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-61.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-62.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-63.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-64.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-65.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-66.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-67.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-68.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-69.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-90.docxml
+/opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-91.docxml'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-0.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-1.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-2.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-3.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-4.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-5.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-6.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-7.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-8.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-9.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-0.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-10.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-11.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-12.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-13.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-14.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-15.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-16.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-17.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-18.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-19.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-1.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-20.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-21.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-26.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-27.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-28.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-29.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-2.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-30.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-31.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-32.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-33.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-34.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-35.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-36.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-37.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-38.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-39.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-3.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-40.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-41.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-42.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-43.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-44.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-45.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-46.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-47.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-48.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-49.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-50.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-51.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-52.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-53.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-54.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-55.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-56.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-57.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-58.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-59.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-60.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-61.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-62.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-63.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-64.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-65.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-66.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-67.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-68.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-69.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-90.docxml ']'
++ for i in '$FILES'
++ '[' '!' -f /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-91.docxml ']'
++ echo 'Converting fof to iob'
+Converting fof to iob
++ '[' YES = YES ']'
++ GEN_IOB_CMD='gen_iob -v -s -r -O -i /opt/ibm/mnlp/workspace/input_file_listing.fof -o /opt/ibm/mnlp/workspace/tmp/mention/input.iob'
++ runCmd 'gen_iob -v -s -r -O -i /opt/ibm/mnlp/workspace/input_file_listing.fof -o /opt/ibm/mnlp/workspace/tmp/mention/input.iob' NO
++ echo ================================================================
+================================================================
++ echo '** Running gen_iob -v -s -r -O -i /opt/ibm/mnlp/workspace/input_file_listing.fof -o /opt/ibm/mnlp/workspace/tmp/mention/input.iob'
+** Running gen_iob -v -s -r -O -i /opt/ibm/mnlp/workspace/input_file_listing.fof -o /opt/ibm/mnlp/workspace/tmp/mention/input.iob
++ eval gen_iob -v -s -r -O -i /opt/ibm/mnlp/workspace/input_file_listing.fof -o /opt/ibm/mnlp/workspace/tmp/mention/input.iob
+++ gen_iob -v -s -r -O -i /opt/ibm/mnlp/workspace/input_file_listing.fof -o /opt/ibm/mnlp/workspace/tmp/mention/input.iob
+verbose mode enabled
+Subtype generation enabled
+Role generation enabled
+add 'O' to <DOC> separator
+output IOB file is set to /opt/ibm/mnlp/workspace/tmp/mention/input.iob
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-0.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-1.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-2.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-3.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-4.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-5.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-6.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-7.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-8.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-9.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-0.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-10.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-11.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-12.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-13.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-14.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-15.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-16.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-17.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-18.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-19.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-1.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-20.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-21.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-26.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-27.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-28.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-29.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-2.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-30.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-31.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-32.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-33.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-34.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-35.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-36.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-37.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-38.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-39.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-3.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-40.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-41.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-42.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-43.docxml
+WARNING: in file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-43.docxml
+entity [3700 3700] is inside token [3698 3700]
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-44.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-45.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-46.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-47.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-48.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-49.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-50.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-51.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-52.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-53.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-54.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-55.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-56.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-57.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-58.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-59.docxml
+WARNING: in file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-59.docxml
+entity [2855 2855] is inside token [2853 2855]
+WARNING: in file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-59.docxml
+entity [3594 3594] is inside token [3592 3594]
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-60.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-61.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-62.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-63.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-64.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-65.docxml
+WARNING: in file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-65.docxml
+entity [453 461] overlaps token [449 456]
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-66.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-67.docxml
+WARNING: in file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-67.docxml
+entity [1654 1662] is inside token [1651 1665]
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-68.docxml
+WARNING: in file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-68.docxml
+entity [1557 1557] is inside token [1555 1557]
+WARNING: in file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-68.docxml
+entity [3085 3089] is inside token [3085 3100]
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-69.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-90.docxml
+processing file /opt/ibm/mnlp/workspace/data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-91.docxml
+
+real	0m0.732s
+user	0m0.692s
+sys	0m0.040s
++ EXIT_CODE=0
++ '[' 0 -ne 0 ']'
++ echo ================================================================
+================================================================
++ return 0
++ checkError 'Failed converting the input file to IOB format.' 'The input file was /opt/ibm/mnlp/workspace/input_file_listing.fof' 'gen_iob -v -s -r -O -i /opt/ibm/mnlp/workspace/input_file_listing.fof -o /opt/ibm/mnlp/workspace/tmp/mention/input.iob'
++ EXIT_CODE=0
++ ERR_TITLE='Failed converting the input file to IOB format.'
++ ERR_DESCP='The input file was /opt/ibm/mnlp/workspace/input_file_listing.fof'
++ ERR_CMD='gen_iob -v -s -r -O -i /opt/ibm/mnlp/workspace/input_file_listing.fof -o /opt/ibm/mnlp/workspace/tmp/mention/input.iob'
++ '[' 0 -ne 0 ']'
++ INPUT_FILE=/opt/ibm/mnlp/workspace/tmp/mention/input.iob
++ cd /opt/ibm/mnlp/workspace/tmp/mention
++ echo ---------------------------------------------------------------------
+---------------------------------------------------------------------
++ echo 'BlueMax mention model training'
+BlueMax mention model training
++ echo 'training data files are specified in /opt/ibm/mnlp/workspace/tmp/mention/input.iob'
+training data files are specified in /opt/ibm/mnlp/workspace/tmp/mention/input.iob
++ echo 'trained model will be named model'
+trained model will be named model
++ echo 'training template is located in /opt/ibm/mnlp/workspace/template/mention/en_klue2'
+training template is located in /opt/ibm/mnlp/workspace/template/mention/en_klue2
++ echo 'training using 100 iterations'
+training using 100 iterations
++ echo 'log files will be created in /opt/ibm/mnlp/workspace/tmp/mention'
+log files will be created in /opt/ibm/mnlp/workspace/tmp/mention
++ echo ---------------------------------------------------------------------
+---------------------------------------------------------------------
+++ date
++ START_TIME='Sat Aug 15 12:56:15 UTC 2020'
++ echo Training started at Sat Aug 15 12:56:15 UTC 2020
+Training started at Sat Aug 15 12:56:15 UTC 2020
++ rm -rf en_klue2 '*.en_klue2.ddinf'
++ '[' '!' -z YES ']'
++ trainLog='| tee /opt/ibm/mnlp/workspace/tmp/mention/train.log'
++ convertLog='| tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log'
+++ basename /opt/ibm/mnlp/workspace/template/mention/en_klue2
++ EXPT=build-en_klue2
++ cmd='/opt/ibm/mnlp/libsire/scripts/maxent_tr/make_new_experiment -v --defaultBaseExperiment --noPJ -m SCGIS --numWorkers 4 -G 300 -f 10 -N 100 -t 32400 -M /opt/ibm/mnlp/workspace/tmp/mention -n build-en_klue2 -B /opt/ibm/mnlp/workspace/template/mention/en_klue2 -v --unknownWordThreshold 2 --unknownMorphThreshold 2 -A --useDefaults /opt/ibm/mnlp/workspace/tmp/mention/input.iob | tee /opt/ibm/mnlp/workspace/tmp/mention/train.log 2>&1'
++ runCmd '/opt/ibm/mnlp/libsire/scripts/maxent_tr/make_new_experiment -v --defaultBaseExperiment --noPJ -m SCGIS --numWorkers 4 -G 300 -f 10 -N 100 -t 32400 -M /opt/ibm/mnlp/workspace/tmp/mention -n build-en_klue2 -B /opt/ibm/mnlp/workspace/template/mention/en_klue2 -v --unknownWordThreshold 2 --unknownMorphThreshold 2 -A --useDefaults /opt/ibm/mnlp/workspace/tmp/mention/input.iob | tee /opt/ibm/mnlp/workspace/tmp/mention/train.log 2>&1'
++ echo ================================================================
+================================================================
++ echo '** Running /opt/ibm/mnlp/libsire/scripts/maxent_tr/make_new_experiment -v --defaultBaseExperiment --noPJ -m SCGIS --numWorkers 4 -G 300 -f 10 -N 100 -t 32400 -M /opt/ibm/mnlp/workspace/tmp/mention -n build-en_klue2 -B /opt/ibm/mnlp/workspace/template/mention/en_klue2 -v --unknownWordThreshold 2 --unknownMorphThreshold 2 -A --useDefaults /opt/ibm/mnlp/workspace/tmp/mention/input.iob | tee /opt/ibm/mnlp/workspace/tmp/mention/train.log 2>&1'
+** Running /opt/ibm/mnlp/libsire/scripts/maxent_tr/make_new_experiment -v --defaultBaseExperiment --noPJ -m SCGIS --numWorkers 4 -G 300 -f 10 -N 100 -t 32400 -M /opt/ibm/mnlp/workspace/tmp/mention -n build-en_klue2 -B /opt/ibm/mnlp/workspace/template/mention/en_klue2 -v --unknownWordThreshold 2 --unknownMorphThreshold 2 -A --useDefaults /opt/ibm/mnlp/workspace/tmp/mention/input.iob | tee /opt/ibm/mnlp/workspace/tmp/mention/train.log 2>&1
++ eval /opt/ibm/mnlp/libsire/scripts/maxent_tr/make_new_experiment -v --defaultBaseExperiment --noPJ -m SCGIS --numWorkers 4 -G 300 -f 10 -N 100 -t 32400 -M /opt/ibm/mnlp/workspace/tmp/mention -n build-en_klue2 -B /opt/ibm/mnlp/workspace/template/mention/en_klue2 -v --unknownWordThreshold 2 --unknownMorphThreshold 2 -A --useDefaults /opt/ibm/mnlp/workspace/tmp/mention/input.iob '|' tee /opt/ibm/mnlp/workspace/tmp/mention/train.log '2>&1'
+++ /opt/ibm/mnlp/libsire/scripts/maxent_tr/make_new_experiment -v --defaultBaseExperiment --noPJ -m SCGIS --numWorkers 4 -G 300 -f 10 -N 100 -t 32400 -M /opt/ibm/mnlp/workspace/tmp/mention -n build-en_klue2 -B /opt/ibm/mnlp/workspace/template/mention/en_klue2 -v --unknownWordThreshold 2 --unknownMorphThreshold 2 -A --useDefaults /opt/ibm/mnlp/workspace/tmp/mention/input.iob
+++ tee /opt/ibm/mnlp/workspace/tmp/mention/train.log
+[33;01mFound the config files inside en_klue2! Excellent!
+[0mPlease briefly describe the experiment build-en_klue2:
+** Automatically generated from  - no modifications made **
+
+[33;01mmkdir -p /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2[0m
+[33;01mmkdir -p build-en_klue2/f[0m
+[33;01mmkdir -p build-en_klue2/data[0m
+[33;01mmkdir -p build-en_klue2/lists[0m
+[33;01mmkdir -p build-en_klue2/ddinf[0m
+[33;01mcp -rf /opt/ibm/mnlp/workspace/template/mention/en_klue2/lists /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2[0m
+[33;01m*** No dictionaries to copy - skipping.
+[0m[33;01m/opt/ibm/mnlp/libsire/scripts/maxent_tr//pcut -f 1,-1 /opt/ibm/mnlp/workspace/tmp/mention/input.iob | perl -pe 's/ [BI]-/ /' | /opt/ibm/mnlp/libsire/scripts/maxent_tr/extract_good_predictors.prl -c 15 - > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/netriggers.all[0m
+[33;01mperl -ape '$_="" if $F[3]<0.8 or $F[3]<0.9 and @F>9' /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/netriggers.all | perl -ape '$_="@F[0..1] 3 $F[5]-ARG 1\n"' | cat - /opt/ibm/mnlp/libsire/scripts/maxent_tr/basic_english_triggers > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/trigger.conf[0m
+[33;01mcp /opt/ibm/mnlp/libsire/scripts/maxent_tr/hmm.flags /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/lists[0m
+[33;01m/opt/ibm/mnlp/libsire/scripts/maxent_tr//extract_entities.prl  /opt/ibm/mnlp/workspace/tmp/mention/input.iob  > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/lists/train.lexicon[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/cache-feat.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/cache-feat.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/constraints.conf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/constraints.conf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/features.conf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/features.conf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/FeatureTypes > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FeatureTypes[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/FeatureTypes > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FeatureTypes[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/FeatureTypes1 > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FeatureTypes1[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/FutureCounts > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FutureCounts[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/FutureCounts.traindata > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FutureCounts.traindata[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/Futures > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/Futures[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/FutureTypes.s > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FutureTypes.s[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/FutureTypes.tr > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FutureTypes.tr[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/HistoryTypes.s > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/HistoryTypes.s[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/HistoryTypes.tr > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/HistoryTypes.tr[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/idf.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/idf.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/lemma.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/lemma.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/morph_filter.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/morph_filter.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/nedict.conf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/nedict.conf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/nedict.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/nedict.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/nedict.short.conf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/nedict.short.conf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/neflags.conf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/neflags.conf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/neflags.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/neflags.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/prefsuf.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/prefsuf.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/trigger.conf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/trigger.conf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/trigger.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/trigger.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/wlength.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/wlength.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/word_filter.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/word_filter.ddinf[0m
+[33;01mperl -pe 's%en_klue2(/|$)%build-en_klue2$1%g; s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s/eng.triggers/trigger.conf/;' /opt/ibm/mnlp/workspace/template/mention/en_klue2/wordLenghtBins.conf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/wordLenghtBins.conf[0m
+[33;01mperl -pe 'if(/TrainingSize/){$_="TrainingSize = 60475;\n"}  s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2%g; s%en_klue2%build-en_klue2%g; '  /opt/ibm/mnlp/workspace/template/mention/en_klue2/ddinf/prior.ddinf > build-en_klue2/ddinf/prior.ddinf[0m
+Skipping editing the files [31;01mbuild-en_klue2/ddinf/prior.ddinf[0m
+[33;01m/bin/mv /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/features.conf.tmp /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/features.conf[0m
+Skipping editing the files [31;01m/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FeatureTypes /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/*.conf /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/*.ddinf[0m
+GenerateNegativeFeatures = 0
+[31;01m******** The out_expt_conf_dir is /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2
+[0m[33;01mperl -pe 's%/opt/ibm/mnlp/workspace/template/mention/en_klue2/data_parser.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/data_parser.ddinf%; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2/decode.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/decode.ddinf%g; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2/memodel.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/memodel.ddinf%;s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s%en_klue2%build-en_klue2%g; ' /opt/ibm/mnlp/workspace/template/mention/en_klue2/maxent.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/maxent.ddinf[0m
+[33;01mperl -pe 's%/opt/ibm/mnlp/workspace/template/mention/en_klue2/data_parser.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/data_parser.ddinf%; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2/decode.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/decode.ddinf%g; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2/memodel.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/memodel.ddinf%;s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s%en_klue2%build-en_klue2%g; ' /opt/ibm/mnlp/workspace/template/mention/en_klue2/data_parser.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/data_parser.ddinf[0m
+[33;01mperl -pe 's%/opt/ibm/mnlp/workspace/template/mention/en_klue2/data_parser.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/data_parser.ddinf%; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2/decode.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/decode.ddinf%g; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2/memodel.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/memodel.ddinf%;s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s%en_klue2%build-en_klue2%g; ' /opt/ibm/mnlp/workspace/template/mention/en_klue2/decode.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/decode.ddinf[0m
+[33;01mperl -pe 's%/opt/ibm/mnlp/workspace/template/mention/en_klue2/data_parser.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/data_parser.ddinf%; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2/decode.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/decode.ddinf%g; s%/opt/ibm/mnlp/workspace/template/mention/en_klue2/memodel.ddinf%/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/memodel.ddinf%;s|%EXPT_HOME|/opt/ibm/mnlp/workspace/tmp/mention|g; s%en_klue2%build-en_klue2%g; ' /opt/ibm/mnlp/workspace/template/mention/en_klue2/memodel.ddinf > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/memodel.ddinf[0m
+[33;01mmkdir -p /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/ddinf[0m
+Skipping editing the files [31;01m/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/maxent.ddinf /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/data_parser.ddinf /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/decode.ddinf /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/memodel.ddinf[0m
+[31;01mScale ddinf is [0m/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/ddinf/scaleSCGISModel.ddinf
+Will use /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/data/train to save training files
+[33;01mmkdir -p /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/data[0m
+[33;01mexport MODELS_HOME=/opt/ibm/mnlp/workspace/tmp/mention ; /opt/ibm/mnlp/bin/x86_64/opt/streamGenerator -r /opt/ibm/mnlp/workspace/tmp/mention -v  /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/maxent.ddinf /opt/ibm/mnlp/workspace/tmp/mention/input.iob[0m
+Stream word read from file/opt/ibm/mnlp/workspace/tmp/mention/input.iob:1
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mfilter[0m [word_filter.ddinf]                          time:                  2[33mms[0m memory:     1[33mm[0m100[33mk[0m ->    [130[33mm[0m84[33mk[0m,29[33mm[0m632[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mextract_capitalization[0m [neflags.ddinf]              time:                  2[33mms[0m memory:       100[33mk[0m ->    [130[33mm[0m84[33mk[0m,29[33mm[0m732[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msuffix_prefix[0m [prefsuf.ddinf]                       time:                 86[33mms[0m memory:         0[33mk[0m ->    [130[33mm[0m84[33mk[0m,29[33mm[0m732[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 27[33mms[0m memory:         0[33mk[0m ->    [130[33mm[0m84[33mk[0m,29[33mm[0m732[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mset_decorator[0m                                       time:                 25[33mms[0m memory:         0[33mk[0m ->    [130[33mm[0m84[33mk[0m,29[33mm[0m732[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mset_decorator[0m                                       time:                 21[33mms[0m memory:         0[33mk[0m ->    [130[33mm[0m84[33mk[0m,29[33mm[0m732[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 22[33mms[0m memory:         0[33mk[0m ->    [130[33mm[0m84[33mk[0m,29[33mm[0m732[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 22[33mms[0m memory:         0[33mk[0m ->    [130[33mm[0m84[33mk[0m,29[33mm[0m732[33mk[0m]
+The resulting flagSetMap contains 161201 elements.
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mdictionary_feature[0m [nedict.ddinf]                   time:             58[33ms[0m396[33mms[0m memory:   458[33mm[0m340[33mk[0m ->   [694[33mm[0m372[33mk[0m,488[33mm[0m48[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mcache_feature[0m [cache-feat.ddinf]                    time:                 71[33mms[0m memory:         0[33mk[0m ->   [694[33mm[0m372[33mk[0m,488[33mm[0m48[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mtrigger_feature[0m [trigger.ddinf]                     time:                478[33mms[0m memory:         0[33mk[0m ->   [694[33mm[0m372[33mk[0m,488[33mm[0m48[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mlc[0m                                                  time:                 15[33mms[0m memory:         0[33mk[0m ->   [694[33mm[0m372[33mk[0m,488[33mm[0m48[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mfilter[0m [morph_filter.ddinf]                         time:                  3[33mms[0m memory:       332[33mk[0m ->  [694[33mm[0m372[33mk[0m,488[33mm[0m380[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 20[33mms[0m memory:         0[33mk[0m ->  [694[33mm[0m372[33mk[0m,488[33mm[0m380[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33midf[0m [idf.ddinf]                                     time:              1[33ms[0m985[33mms[0m memory:    65[33mm[0m940[33mk[0m ->  [710[33mm[0m748[33mk[0m,554[33mm[0m296[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33midf[0m [wlength.ddinf]                                 time:                101[33mms[0m memory:         0[33mk[0m ->  [710[33mm[0m748[33mk[0m,554[33mm[0m296[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mconcatenated_sequence_decorator[0m                     time:                 22[33mms[0m memory:         0[33mk[0m ->  [710[33mm[0m748[33mk[0m,554[33mm[0m296[33mk[0m]
+Result file in /opt/ibm/mnlp/workspace/tmp/mention/input.iob:2
+Sequence-based stream generation
+Time spent during initialization: 60 seconds.
+Sentences processed per second: 1065.43.
+Words processed per second: 16283.
+Stream generation time: 3.714.
+Overall processing speed (wrds/sec): 949.163.
+[33;01mexport MODELS_HOME=/opt/ibm/mnlp/workspace/tmp/mention ; /opt/ibm/mnlp/bin/x86_64/opt/computePrior /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/ddinf/prior.ddinf[0m
+[32m[ME::init][0m Running in training mode - will load all structures
+[32m[ME::init][0m Will keep all features, no matter how small.
+[32m[EventReader::openFilesForReading][0m history type file is /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/HistoryTypes.tr
+[32m[EventReader::openFilesForReading][0m history type file is /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/HistoryTypes.tr
+All done!
+which: no spj in (/opt/ibm/mnlp/bin/x86_64/opt/:/opt/ibm/mnlp/serve-runtime/worker-manager/bin/:/opt/rh/rh-python36/root/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin)
+PJ result: [32;01m[0m
+[33;01mexport MODELS_HOME=/opt/ibm/mnlp/workspace/tmp/mention ; time /opt/ibm/mnlp/bin/x86_64/opt/featgen3 /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/scale.ddinf /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/pool.0.0 /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/priorModel[0m
+[ME::init:1] param file is /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/ddinf/scaleSCGISModel.ddinf, root is 
+[32m[ME::init][0m Running in training mode - will load all structures
+[32m[ME::init][0m Will keep all features, no matter how small.
+[32m[EventReader::openFilesForReading][0m history type file is /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/HistoryTypes.tr
+Stream word read from file/opt/ibm/mnlp/workspace/tmp/mention/input.iob:1
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mfilter[0m [word_filter.ddinf]                          time:                  1[33mms[0m memory:       676[33mk[0m ->    [132[33mm[0m52[33mk[0m,31[33mm[0m548[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mextract_capitalization[0m [neflags.ddinf]              time:                  1[33mms[0m memory:       124[33mk[0m ->    [132[33mm[0m52[33mk[0m,31[33mm[0m672[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msuffix_prefix[0m [prefsuf.ddinf]                       time:                 66[33mms[0m memory:         0[33mk[0m ->    [132[33mm[0m52[33mk[0m,31[33mm[0m672[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 21[33mms[0m memory:         0[33mk[0m ->    [132[33mm[0m52[33mk[0m,31[33mm[0m672[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mset_decorator[0m                                       time:                 18[33mms[0m memory:         0[33mk[0m ->    [132[33mm[0m52[33mk[0m,31[33mm[0m672[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mset_decorator[0m                                       time:                 15[33mms[0m memory:         0[33mk[0m ->    [132[33mm[0m52[33mk[0m,31[33mm[0m672[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 15[33mms[0m memory:         0[33mk[0m ->    [132[33mm[0m52[33mk[0m,31[33mm[0m672[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 15[33mms[0m memory:         0[33mk[0m ->    [132[33mm[0m52[33mk[0m,31[33mm[0m672[33mk[0m]
+The resulting flagSetMap contains 161201 elements.
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mdictionary_feature[0m [nedict.ddinf]                   time:             57[33ms[0m558[33mms[0m memory:   458[33mm[0m228[33mk[0m ->  [695[33mm[0m340[33mk[0m,489[33mm[0m900[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mcache_feature[0m [cache-feat.ddinf]                    time:                 77[33mms[0m memory:         0[33mk[0m ->  [695[33mm[0m340[33mk[0m,489[33mm[0m900[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mtrigger_feature[0m [trigger.ddinf]                     time:                478[33mms[0m memory:         0[33mk[0m ->  [695[33mm[0m340[33mk[0m,489[33mm[0m900[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mlc[0m                                                  time:                 16[33mms[0m memory:         0[33mk[0m ->  [695[33mm[0m340[33mk[0m,489[33mm[0m900[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mfilter[0m [morph_filter.ddinf]                         time:                  4[33mms[0m memory:       300[33mk[0m ->  [695[33mm[0m340[33mk[0m,490[33mm[0m176[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 21[33mms[0m memory:         0[33mk[0m ->  [695[33mm[0m340[33mk[0m,490[33mm[0m176[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33midf[0m [idf.ddinf]                                     time:              1[33ms[0m953[33mms[0m memory:    65[33mm[0m728[33mk[0m ->  [711[33mm[0m716[33mk[0m,555[33mm[0m904[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33midf[0m [wlength.ddinf]                                 time:                 81[33mms[0m memory:         0[33mk[0m ->  [711[33mm[0m716[33mk[0m,555[33mm[0m904[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mconcatenated_sequence_decorator[0m                     time:                 24[33mms[0m memory:         0[33mk[0m ->  [711[33mm[0m716[33mk[0m,555[33mm[0m904[33mk[0m]
+Result file in /opt/ibm/mnlp/workspace/tmp/mention/input.iob:2
+[[32mvoid __com_ibm_ykt_ikm_nls::MEModel::initModel[0m] The default classification is O
+[33m[ME::setPrior][0m Feature file /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/seedModel not found, assuming zero features
+[[33mvoid __com_ibm_ykt_ikm_nls::MEModel::initModel[0m]  Warning: the feature file is empty (it's OK in some cases, e.g. when generating features).
+All done!
+
+real	1m5.948s
+user	1m4.828s
+sys	0m1.116s
+Creating seedModel
+[33;01mcat /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/pool.* | /opt/ibm/mnlp/libsire/scripts/maxent_tr//mergeFeats.perl  -R -N 1 -F /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/FeatureTypes -v  > /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/seedModel[0m
+10000 20000 30000 40000 50000 60000 70000 80000 90000 100000 110000 120000 130000 140000 150000 160000 170000 180000 190000 193563
+10000 20000 30000 40000 50000 60000 70000 80000 90000 100000 110000 120000 130000 140000 150000 160000 170000 180000 190000 Sorting 193563 features.
+Done.
+Starting experiment..[33;01mexport MODELS_HOME=/opt/ibm/mnlp/workspace/tmp/mention ; /opt/ibm/mnlp/bin/x86_64/opt/scaleMEModel -t 32400 -n 4 -m SCGIS --gaussian-variance 300  /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/scale.ddinf /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/seedModel /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/modelSCGIS-300 100  2>&1 | tee /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/build-en_klue2-SCGIS.log [0m
+Bluemax Running /opt/ibm/mnlp/bin/x86_64/opt/scaleMEModel -t 32400 -n 4 -m SCGIS --gaussian-variance 300 /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/scale.ddinf /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/seedModel /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/modelSCGIS-300 100
+[32m[scaleMEModel::main[0m infoFile=/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/scale.ddinf, inputFile=/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/seedModel, outputFile=/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/modelSCGIS-300
+Training Mode: SCGIS
+[ME::init:1] param file is /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/ddinf/scaleSCGISModel.ddinf, root is 
+[32m[ME::init][0m Running in training mode - will load all structures
+[32m[ME::init][0m Will keep all features, no matter how small.
+[32m[EventReader::openFilesForReading][0m history type file is /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/HistoryTypes.tr
+Stream word read from file/opt/ibm/mnlp/workspace/tmp/mention/input.iob:1
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mfilter[0m [word_filter.ddinf]                          time:                  1[33mms[0m memory:       528[33mk[0m ->     [138[33mm[0m80[33mk[0m,38[33mm[0m40[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mextract_capitalization[0m [neflags.ddinf]              time:                  1[33mms[0m memory:       180[33mk[0m ->    [139[33mm[0m80[33mk[0m,38[33mm[0m220[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msuffix_prefix[0m [prefsuf.ddinf]                       time:                 56[33mms[0m memory:         0[33mk[0m ->    [139[33mm[0m80[33mk[0m,38[33mm[0m220[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 22[33mms[0m memory:         0[33mk[0m ->    [139[33mm[0m80[33mk[0m,38[33mm[0m220[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mset_decorator[0m                                       time:                 28[33mms[0m memory:       152[33mk[0m ->    [139[33mm[0m80[33mk[0m,38[33mm[0m372[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mset_decorator[0m                                       time:                 22[33mms[0m memory:         0[33mk[0m ->    [139[33mm[0m80[33mk[0m,38[33mm[0m372[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 38[33mms[0m memory:         0[33mk[0m ->    [139[33mm[0m80[33mk[0m,38[33mm[0m372[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 14[33mms[0m memory:         0[33mk[0m ->    [139[33mm[0m80[33mk[0m,38[33mm[0m372[33mk[0m]
+The resulting flagSetMap contains 161201 elements.
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mdictionary_feature[0m [nedict.ddinf]                   time:             1[33mm[0m1[33ms[0m69[33mms[0m memory:   458[33mm[0m292[33mk[0m ->  [702[33mm[0m368[33mk[0m,496[33mm[0m664[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mcache_feature[0m [cache-feat.ddinf]                    time:                 75[33mms[0m memory:         0[33mk[0m ->  [702[33mm[0m368[33mk[0m,496[33mm[0m664[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mtrigger_feature[0m [trigger.ddinf]                     time:                450[33mms[0m memory:         0[33mk[0m ->  [702[33mm[0m368[33mk[0m,496[33mm[0m664[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mlc[0m                                                  time:                 16[33mms[0m memory:         0[33mk[0m ->  [702[33mm[0m368[33mk[0m,496[33mm[0m664[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mfilter[0m [morph_filter.ddinf]                         time:                  4[33mms[0m memory:       116[33mk[0m ->  [702[33mm[0m368[33mk[0m,496[33mm[0m780[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33msequence_decorator[0m                                  time:                 35[33mms[0m memory:         0[33mk[0m ->  [702[33mm[0m368[33mk[0m,496[33mm[0m780[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33midf[0m [idf.ddinf]                                     time:              2[33ms[0m143[33mms[0m memory:    65[33mm[0m752[33mk[0m ->  [718[33mm[0m744[33mk[0m,562[33mm[0m508[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33midf[0m [wlength.ddinf]                                 time:                 96[33mms[0m memory:         0[33mk[0m ->  [718[33mm[0m744[33mk[0m,562[33mm[0m508[33mk[0m]
+[32m[FeatureCreationFunction::createExtractorFunction][0m loaded [33mconcatenated_sequence_decorator[0m                     time:                 28[33mms[0m memory:         0[33mk[0m ->  [718[33mm[0m744[33mk[0m,562[33mm[0m508[33mk[0m]
+Result file in /opt/ibm/mnlp/workspace/tmp/mention/input.iob:2
+[[32mvoid __com_ibm_ykt_ikm_nls::MEModel::initModel[0m] The default classification is O
+[[32m__com_ibm_ykt_ikm_nls::FeatureManager::readFeatures[0m] Reading features from /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2/f/seedModel
+[32m[FeatureGenerator::Read][0m Before reading features [718[33mm[0m744[33mk[0m,562[33mm[0m500[33mk[0m].
+[32m[FeatureGenerator::Read][0m Read 193563 features : +0[33mk[0m/25[33mm[0m676[33mk[0m.
+[32m[FeatureGenerator::Read][0m dynamic history representation: +0[33mk[0m/332[33mk[0m.
+[32m[FeatureGenerator::Read][0m Read 193563 features, discarding 0 due to low alpha.
+[32m[FeatureGenerator::Read][0m After reading features [718[33mm[0m744[33mk[0m,595[33mm[0m276[33mk[0m].
+[32m[ME::setPrior][0m read ME model in 1 second, 85 milliseconds, mem +6[33mm[0m768[33mk[0m/35[33mm[0m696[33mk[0m.
+[32m[scaleMEModel::main][0m Will run with gaussian variance 300, L1 penalty 0, L2 penalty 0, 4 threads.
+Time left to train: 8 hours, 58 minutes, 56 seconds
+done. [830[33mm[0m944[33mk[0m,725[33mm[0m444[33mk[0m]
+Number of workers: 4
+Initial processing:  (# of words: 60475, # of sentences: 3957)
+senIndex[1] = 979, wordIndex = 15121
+senIndex[2] = 1906, wordIndex = 30247
+senIndex[3] = 2824, wordIndex = 45366
+senIndex[4] = 3956, wordIndex = 60475
+Child 1 processing sentences [-1 to 979)
+Child 2 processing sentences [979 to 1906)
+Child 3 processing sentences [1906 to 2824)
+Children are: 230 231 232 233.
+Child 4 processing sentences [2824 to 3956)
+ Iteration         Obj            WErr                        Timing
+Setting the variance parameter to 0.671944(trainingMass=60475, varianceMultiplier=300)
+Setting the variance parameter to 0.671944(trainingMass=60475, varianceMultiplier=300)
+Setting the variance parameter to Setting the variance parameter to 0.6719440.671944(trainingMass=(trainingMass=6047560475, varianceMultiplier=, varianceMultiplier=300300)
+)
+Setting the variance parameter to 0.671944(trainingMass=60475, varianceMultiplier=300)
+         0      548.77      0.12/ 0.00       4[33ms[0m433[33mms[0m
+         1      378.38      0.07/ 0.00                  687[33mms[0m
+         2      311.65      0.05/ 0.00                  690[33mms[0m
+         3      276.10      0.04/ 0.00                  646[33mms[0m
+         4      254.03      0.04/ 0.00                  676[33mms[0m
+         5      238.86      0.04/ 0.00                  648[33mms[0m
+         6      227.65      0.04/ 0.00                  673[33mms[0m
+         7      218.92      0.04/ 0.00                  660[33mms[0m
+         8      211.85      0.04/ 0.00                  678[33mms[0m
+         9      205.93      0.04/ 0.00                  679[33mms[0m
+        10      200.87      0.04/ 0.00                  651[33mms[0m
+        11      196.45      0.04/ 0.00                  672[33mms[0m
+        12      192.55      0.04/ 0.00                  677[33mms[0m
+        13      189.06      0.04/ 0.00                  611[33mms[0m
+        14      185.91      0.04/ 0.00                  661[33mms[0m
+        15      183.05      0.04/ 0.00                  649[33mms[0m
+        16      180.42      0.04/ 0.00                  649[33mms[0m
+        17      178.00      0.04/ 0.00                  658[33mms[0m
+        18      175.76      0.04/ 0.00                  683[33mms[0m
+        19      173.67      0.04/ 0.00                  653[33mms[0m
+        20      171.73      0.04/ 0.00                  656[33mms[0m
+        21      169.91      0.04/ 0.00                  646[33mms[0m
+        22      168.19      0.04/ 0.00                  639[33mms[0m
+        23      166.58      0.04/ 0.00                  640[33mms[0m
+        24      165.06      0.04/ 0.00                  645[33mms[0m
+        25      163.62      0.04/ 0.00                  636[33mms[0m
+        26      162.25      0.04/ 0.00                  658[33mms[0m
+        27      160.95      0.04/ 0.00                  622[33mms[0m
+        28      159.71      0.03/ 0.00                  643[33mms[0m
+        29      158.53      0.03/ 0.00                  655[33mms[0m
+        30      157.41      0.03/ 0.00                  642[33mms[0m
+        31      156.33      0.03/ 0.00                  646[33mms[0m
+        32      155.30      0.03/ 0.00                  653[33mms[0m
+        33      154.31      0.03/ 0.00                  646[33mms[0m
+        34      153.36      0.03/ 0.00                  632[33mms[0m
+        35      152.45      0.03/ 0.00                  586[33mms[0m
+        36      151.57      0.03/ 0.00                  625[33mms[0m
+        37      150.73      0.03/ 0.00                  654[33mms[0m
+        38      149.92      0.03/ 0.00                  640[33mms[0m
+        39      149.14      0.03/ 0.00                  641[33mms[0m
+        40      148.38      0.03/ 0.00                  663[33mms[0m
+        41      147.65      0.03/ 0.00                  636[33mms[0m
+        42      146.95      0.03/ 0.00                  645[33mms[0m
+        43      146.27      0.03/ 0.00                  696[33mms[0m
+        44      145.61      0.03/ 0.00                  642[33mms[0m
+        45      144.97      0.03/ 0.00                  661[33mms[0m
+        46      144.35      0.03/ 0.00                  652[33mms[0m
+        47      143.75      0.03/ 0.00                  647[33mms[0m
+        48      143.17      0.03/ 0.00                  654[33mms[0m
+        49      142.61      0.03/ 0.00                  664[33mms[0m
+        50      142.06      0.03/ 0.00                  644[33mms[0m
+        51      141.53      0.03/ 0.00                  656[33mms[0m
+        52      141.01      0.03/ 0.00                  645[33mms[0m
+        53      140.50      0.03/ 0.00                  640[33mms[0m
+        54      140.01      0.03/ 0.00                  630[33mms[0m
+        55      139.54      0.03/ 0.00                  604[33mms[0m
+        56      139.07      0.03/ 0.00                  639[33mms[0m
+        57      138.62      0.03/ 0.00                  669[33mms[0m
+        58      138.17      0.03/ 0.00                  672[33mms[0m
+        59      137.74      0.03/ 0.00                  684[33mms[0m
+        60      137.32      0.03/ 0.00                  701[33mms[0m
+        61      136.91      0.03/ 0.00                  665[33mms[0m
+        62      136.51      0.03/ 0.00                  656[33mms[0m
+        63      136.11      0.03/ 0.00                  644[33mms[0m
+        64      135.73      0.03/ 0.00                  651[33mms[0m
+        65      135.36      0.03/ 0.00                  645[33mms[0m
+        66      134.99      0.03/ 0.00                  662[33mms[0m
+        67      134.63      0.03/ 0.00                  621[33mms[0m
+        68      134.28      0.03/ 0.00                  618[33mms[0m
+        69      133.93      0.03/ 0.00                  636[33mms[0m
+        70      133.60      0.03/ 0.00                  660[33mms[0m
+        71      133.26      0.03/ 0.00                  661[33mms[0m
+        72      132.94      0.03/ 0.00                  627[33mms[0m
+        73      132.62      0.03/ 0.00                  693[33mms[0m
+        74      132.31      0.03/ 0.00                  647[33mms[0m
+        75      132.01      0.03/ 0.00                  657[33mms[0m
+        76      131.71      0.03/ 0.00                  656[33mms[0m
+        77      131.42      0.03/ 0.00                  657[33mms[0m
+        78      131.13      0.03/ 0.00                  650[33mms[0m
+        79      130.84      0.03/ 0.00                  658[33mms[0m
+        80      130.57      0.03/ 0.00                  658[33mms[0m
+        81      130.30      0.03/ 0.00                  660[33mms[0m
+        82      130.03      0.03/ 0.00                  696[33mms[0m
+        83      129.77      0.03/ 0.00                  660[33mms[0m
+        84      129.51      0.03/ 0.00                  650[33mms[0m
+        85      129.25      0.03/ 0.00                  659[33mms[0m
+        86      129.00      0.03/ 0.00                  651[33mms[0m
+        87      128.76      0.03/ 0.00                  643[33mms[0m
+        88      128.52      0.03/ 0.00                  643[33mms[0m
+        89      128.28      0.03/ 0.00                  639[33mms[0m
+        90      128.05      0.03/ 0.00                  641[33mms[0m
+        91      127.82      0.03/ 0.00                  645[33mms[0m
+        92      127.60      0.03/ 0.00                  649[33mms[0m
+        93      127.37      0.03/ 0.00                  643[33mms[0m
+        94      127.16      0.03/ 0.00                  642[33mms[0m
+        95      126.94      0.03/ 0.00                  645[33mms[0m
+        96      126.73      0.03/ 0.00                  641[33mms[0m
+        97      126.52      0.03/ 0.00                  640[33mms[0m
+        98      126.32      0.03/ 0.00                  654[33mms[0m
+CHILD CHILD 24CHILD  all iterations finished!
+ all iterations finished!
+CHILD 3 all iterations finished!
+1 all iterations finished!
+        99      126.12      0.03/ 0.00                  641[33mms[0m
+
+Training took, on average, 689 milliseconds(689).
+
+Training time: 2 minutes, 16 seconds, 22 milliseconds (136022 milliseconds) 
+
+real	4m31.407s
+user	4m16.352s
+sys	0m5.672s
++ EXIT_CODE=0
++ '[' 0 -ne 0 ']'
++ echo ================================================================
+================================================================
++ return 0
++ checkError 'Failed running the new mention experiment.' '' '/opt/ibm/mnlp/libsire/scripts/maxent_tr/make_new_experiment -v --defaultBaseExperiment --noPJ -m SCGIS --numWorkers 4 -G 300 -f 10 -N 100 -t 32400 -M /opt/ibm/mnlp/workspace/tmp/mention -n build-en_klue2 -B /opt/ibm/mnlp/workspace/template/mention/en_klue2 -v --unknownWordThreshold 2 --unknownMorphThreshold 2 -A --useDefaults /opt/ibm/mnlp/workspace/tmp/mention/input.iob | tee /opt/ibm/mnlp/workspace/tmp/mention/train.log 2>&1'
++ EXIT_CODE=0
++ ERR_TITLE='Failed running the new mention experiment.'
++ ERR_DESCP=
++ ERR_CMD='/opt/ibm/mnlp/libsire/scripts/maxent_tr/make_new_experiment -v --defaultBaseExperiment --noPJ -m SCGIS --numWorkers 4 -G 300 -f 10 -N 100 -t 32400 -M /opt/ibm/mnlp/workspace/tmp/mention -n build-en_klue2 -B /opt/ibm/mnlp/workspace/template/mention/en_klue2 -v --unknownWordThreshold 2 --unknownMorphThreshold 2 -A --useDefaults /opt/ibm/mnlp/workspace/tmp/mention/input.iob | tee /opt/ibm/mnlp/workspace/tmp/mention/train.log 2>&1'
++ '[' 0 -ne 0 ']'
++ '[' -e build-en_klue2/f/modelSCGIS-300.latest ']'
++ modelFile=build-en_klue2/f/modelSCGIS-300.latest
++ cmd='/opt/ibm/mnlp/libsire/scripts/maxent_tr/convert2SIRE_model.prl --model build-en_klue2/f/modelSCGIS-300.latest /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2 model | tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log 2>&1'
++ runCmd '/opt/ibm/mnlp/libsire/scripts/maxent_tr/convert2SIRE_model.prl --model build-en_klue2/f/modelSCGIS-300.latest /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2 model | tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log 2>&1'
++ echo ================================================================
+================================================================
++ echo '** Running /opt/ibm/mnlp/libsire/scripts/maxent_tr/convert2SIRE_model.prl --model build-en_klue2/f/modelSCGIS-300.latest /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2 model | tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log 2>&1'
+** Running /opt/ibm/mnlp/libsire/scripts/maxent_tr/convert2SIRE_model.prl --model build-en_klue2/f/modelSCGIS-300.latest /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2 model | tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log 2>&1
++ eval /opt/ibm/mnlp/libsire/scripts/maxent_tr/convert2SIRE_model.prl --model build-en_klue2/f/modelSCGIS-300.latest /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2 model '|' tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log '2>&1'
+++ tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log
+++ /opt/ibm/mnlp/libsire/scripts/maxent_tr/convert2SIRE_model.prl --model build-en_klue2/f/modelSCGIS-300.latest /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2 model
+newpath=/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2
+indir=/opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2
+indir NOW /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2
+
+real	0m4.086s
+user	0m3.380s
+sys	0m0.952s
++ EXIT_CODE=0
++ '[' 0 -ne 0 ']'
++ echo ================================================================
+================================================================
++ return 0
++ checkError 'Failed exporting the trained model.' '' '/opt/ibm/mnlp/libsire/scripts/maxent_tr/convert2SIRE_model.prl --model build-en_klue2/f/modelSCGIS-300.latest /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2 model | tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log 2>&1'
++ EXIT_CODE=0
++ ERR_TITLE='Failed exporting the trained model.'
++ ERR_DESCP=
++ ERR_CMD='/opt/ibm/mnlp/libsire/scripts/maxent_tr/convert2SIRE_model.prl --model build-en_klue2/f/modelSCGIS-300.latest /opt/ibm/mnlp/workspace/tmp/mention/build-en_klue2 model | tee /opt/ibm/mnlp/workspace/tmp/mention/convert.log 2>&1'
++ '[' 0 -ne 0 ']'
++ '[' -z YES ']'
+++ date
++ END_TIME='Sat Aug 15 13:00:50 UTC 2020'
++ echo 'mention training started in Sat Aug 15 12:56:15 UTC 2020 and ended in Sat Aug 15 13:00:50 UTC 2020'
+mention training started in Sat Aug 15 12:56:15 UTC 2020 and ended in Sat Aug 15 13:00:50 UTC 2020

@@ -1,0 +1,126 @@
+Sat Aug 15 12:56:13 UTC 2020: job parameters:
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_LANGUAGE=en
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_TRAIN_DATA_URI=s3://wksdata-pprd/wks/sire/training/v3/tnxc5j44oz88yk30/7edab450-dc2e-11ea-bff2-05ea84f8fa50/7edab450-dc2e-11ea-bff2-05ea84f8fa50.zip
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_TEMPLATE_MENTION=klue2
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_TEMPLATE_COREF=
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_TEMPLATE_RELATION=
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_TRAIN_CROSS_SENTENCE_RELATION_MODEL=
+Sat Aug 15 12:56:13 UTC 2020: K8S_JOB_QUEUE_JOB_ID=53772759-9ad8-4279-97c8-48ce8719f4eb
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_S3_ENDPOINT=https://s3-api.us-geo.objectstorage.service.networklayer.com
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_COS_PROFILE=tenant
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_MODEL_OUT_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/5959cd88-25d8-4d54-aba9-41bb11aa664d
+Sat Aug 15 12:56:13 UTC 2020: SIRE_TRAIN_LOGS_OUT_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/5959cd88-25d8-4d54-aba9-41bb11aa664d
+Sat Aug 15 12:56:13 UTC 2020: export SIRE_TRAIN_LANGUAGE=en;export SIRE_TRAIN_TRAIN_DATA_URI=s3://wksdata-pprd/wks/sire/training/v3/tnxc5j44oz88yk30/7edab450-dc2e-11ea-bff2-05ea84f8fa50/7edab450-dc2e-11ea-bff2-05ea84f8fa50.zip;export SIRE_TRAIN_TEMPLATE_MENTION=klue2;export SIRE_TRAIN_TEMPLATE_COREF=;export SIRE_TRAIN_TEMPLATE_RELATION=;export SIRE_TRAIN_TRAIN_CROSS_SENTENCE_RELATION_MODEL=;export K8S_JOB_QUEUE_JOB_ID=53772759-9ad8-4279-97c8-48ce8719f4eb;export SIRE_TRAIN_S3_ENDPOINT=https://s3-api.us-geo.objectstorage.service.networklayer.com;export SIRE_TRAIN_COS_PROFILE=tenant;export SIRE_TRAIN_MODEL_OUT_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/5959cd88-25d8-4d54-aba9-41bb11aa664d;export SIRE_TRAIN_LOGS_OUT_URI=s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/5959cd88-25d8-4d54-aba9-41bb11aa664d
+Sat Aug 15 12:56:13 UTC 2020: cleaning workspace /opt/ibm/mnlp/workspace
+Sat Aug 15 12:56:13 UTC 2020: job id: 53772759-9ad8-4279-97c8-48ce8719f4eb
+Sat Aug 15 12:56:13 UTC 2020: model name is: model
+Sat Aug 15 12:56:13 UTC 2020: using base triggers t
+Sat Aug 15 12:56:13 UTC 2020: downloading the training data from s3://wksdata-pprd/wks/sire/training/v3/tnxc5j44oz88yk30/7edab450-dc2e-11ea-bff2-05ea84f8fa50/7edab450-dc2e-11ea-bff2-05ea84f8fa50.zip
+Completed 256.0 KiB/1.9 MiB (1.0 MiB/s) with 1 file(s) remainingCompleted 512.0 KiB/1.9 MiB (2.0 MiB/s) with 1 file(s) remainingCompleted 768.0 KiB/1.9 MiB (2.9 MiB/s) with 1 file(s) remainingCompleted 1.0 MiB/1.9 MiB (3.8 MiB/s) with 1 file(s) remaining  Completed 1.2 MiB/1.9 MiB (4.7 MiB/s) with 1 file(s) remaining  Completed 1.5 MiB/1.9 MiB (5.5 MiB/s) with 1 file(s) remaining  Completed 1.8 MiB/1.9 MiB (6.3 MiB/s) with 1 file(s) remaining  Completed 1.9 MiB/1.9 MiB (6.7 MiB/s) with 1 file(s) remaining  download: s3://wksdata-pprd/wks/sire/training/v3/tnxc5j44oz88yk30/7edab450-dc2e-11ea-bff2-05ea84f8fa50/7edab450-dc2e-11ea-bff2-05ea84f8fa50.zip to ./train_data.zip
+Sat Aug 15 12:56:14 UTC 2020: unpacking input file
+Archive:  train_data.zip
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-0.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-1.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-2.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-3.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-4.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-5.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-6.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-7.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-8.docxml  
+  inflating: data/train/1f755dd0-dcdd-11ea-867e-310ea01aa1ba-9.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-0.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-1.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-10.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-11.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-12.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-13.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-14.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-15.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-16.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-17.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-18.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-19.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-2.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-20.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-21.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-26.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-27.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-28.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-29.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-3.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-30.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-31.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-32.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-33.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-34.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-35.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-36.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-37.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-38.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-39.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-40.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-41.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-42.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-43.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-44.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-45.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-46.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-47.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-48.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-49.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-50.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-51.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-52.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-53.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-54.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-55.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-56.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-57.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-58.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-59.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-60.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-61.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-62.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-63.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-64.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-65.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-66.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-67.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-68.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-69.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-90.docxml  
+  inflating: data/train/482fd3c0-def1-11ea-bff2-05ea84f8fa50-91.docxml  
+  inflating: dicts/Location          
+  inflating: dicts/ProfessionalCertifications  
+  inflating: dicts/ProgrammingLanguages  
+  inflating: dicts/TechnicalSkill    
+  inflating: dicts/JobFunction       
+  inflating: dicts/EducationLevel    
+  inflating: relation.constraints    
+  inflating: wks/metadata/wksTypeDescriptor.xml  
+  inflating: wks/metadata/wksModelDescriptor.xml  
+  inflating: wks/metadata/wksProjectDescriptor.xml  
+Sat Aug 15 12:56:14 UTC 2020: creating list of input files
+Sat Aug 15 12:56:14 UTC 2020: found 72 input files
+Sat Aug 15 12:56:14 UTC 2020: total training data is 9836 kb
+Sat Aug 15 12:56:14 UTC 2020: Using 4 workers
+Sat Aug 15 12:56:14 UTC 2020: Using output dir /opt/ibm/mnlp/workspace/modeldata
+Sat Aug 15 12:56:14 UTC 2020: Copying language specific files from /opt/ibm/mnlp/language-config/en
+Sat Aug 15 12:56:14 UTC 2020: Found mention template, starting preparation and training.
+Sat Aug 15 12:56:14 UTC 2020: the training data contains dictionary files, we copy the template to the workspace and manipulate the dicts
+Sat Aug 15 12:56:14 UTC 2020: copying mention dictionary files
+Sat Aug 15 12:56:14 UTC 2020: starting mention training
+Sat Aug 15 13:00:50 UTC 2020: copying mention model to /opt/ibm/mnlp/workspace/modeldata/mention
+Sat Aug 15 13:00:50 UTC 2020: cleaning up temp mention dir
+Sat Aug 15 13:00:50 UTC 2020: mention training took 276501 ms
+Sat Aug 15 13:00:50 UTC 2020: copying language specific dependencies
+Sat Aug 15 13:00:50 UTC 2020: determining disk size of model
+Sat Aug 15 13:00:50 UTC 2020: disk size is 126180
+Sat Aug 15 13:00:50 UTC 2020: running driver to verify model and determine mem size: /opt/ibm/mnlp/bin/x86_64/opt/driver -L -l tm -c /opt/ibm/mnlp/workspace/modeldata/decode.ddinf
+Sat Aug 15 13:01:52 UTC 2020: mem size (rss) of model is 713232
+Sat Aug 15 13:01:52 UTC 2020: copying wks meta data dir to /opt/ibm/mnlp/workspace/modeldata
+Sat Aug 15 13:01:52 UTC 2020: creating model.zip in /opt/ibm/mnlp/workspace/modeldata
+Sat Aug 15 13:01:56 UTC 2020: trained and packaged model successfully
+Sat Aug 15 13:01:56 UTC 2020: uploading model to s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/5959cd88-25d8-4d54-aba9-41bb11aa664d/53772759-9ad8-4279-97c8-48ce8719f4eb/model.zip
+Completed 256.0 KiB/32.9 MiB (288.2 KiB/s) with 1 file(s) remainingCompleted 512.0 KiB/32.9 MiB (568.3 KiB/s) with 1 file(s) remainingCompleted 768.0 KiB/32.9 MiB (849.4 KiB/s) with 1 file(s) remainingCompleted 1.0 MiB/32.9 MiB (1.1 MiB/s) with 1 file(s) remaining    Completed 1.2 MiB/32.9 MiB (1.4 MiB/s) with 1 file(s) remaining    Completed 1.5 MiB/32.9 MiB (1.6 MiB/s) with 1 file(s) remaining    Completed 1.8 MiB/32.9 MiB (1.9 MiB/s) with 1 file(s) remaining    Completed 2.0 MiB/32.9 MiB (2.2 MiB/s) with 1 file(s) remaining    Completed 2.2 MiB/32.9 MiB (2.4 MiB/s) with 1 file(s) remaining    Completed 2.5 MiB/32.9 MiB (2.7 MiB/s) with 1 file(s) remaining    Completed 2.8 MiB/32.9 MiB (3.0 MiB/s) with 1 file(s) remaining    Completed 3.0 MiB/32.9 MiB (3.2 MiB/s) with 1 file(s) remaining    Completed 3.2 MiB/32.9 MiB (3.5 MiB/s) with 1 file(s) remaining    Completed 3.5 MiB/32.9 MiB (3.8 MiB/s) with 1 file(s) remaining    Completed 3.8 MiB/32.9 MiB (4.0 MiB/s) with 1 file(s) remaining    Completed 4.0 MiB/32.9 MiB (4.3 MiB/s) with 1 file(s) remaining    Completed 4.2 MiB/32.9 MiB (4.5 MiB/s) with 1 file(s) remaining    Completed 4.5 MiB/32.9 MiB (4.8 MiB/s) with 1 file(s) remaining    Completed 4.8 MiB/32.9 MiB (5.0 MiB/s) with 1 file(s) remaining    Completed 5.0 MiB/32.9 MiB (5.3 MiB/s) with 1 file(s) remaining    Completed 5.2 MiB/32.9 MiB (5.5 MiB/s) with 1 file(s) remaining    Completed 5.5 MiB/32.9 MiB (5.7 MiB/s) with 1 file(s) remaining    Completed 5.8 MiB/32.9 MiB (6.0 MiB/s) with 1 file(s) remaining    Completed 6.0 MiB/32.9 MiB (6.2 MiB/s) with 1 file(s) remaining    Completed 6.2 MiB/32.9 MiB (6.4 MiB/s) with 1 file(s) remaining    Completed 6.5 MiB/32.9 MiB (6.6 MiB/s) with 1 file(s) remaining    Completed 6.8 MiB/32.9 MiB (6.8 MiB/s) with 1 file(s) remaining    Completed 7.0 MiB/32.9 MiB (7.0 MiB/s) with 1 file(s) remaining    Completed 7.2 MiB/32.9 MiB (7.2 MiB/s) with 1 file(s) remaining    Completed 7.5 MiB/32.9 MiB (7.5 MiB/s) with 1 file(s) remaining    Completed 7.8 MiB/32.9 MiB (7.5 MiB/s) with 1 file(s) remaining    Completed 8.0 MiB/32.9 MiB (7.7 MiB/s) with 1 file(s) remaining    Completed 8.2 MiB/32.9 MiB (7.7 MiB/s) with 1 file(s) remaining    Completed 8.5 MiB/32.9 MiB (7.9 MiB/s) with 1 file(s) remaining    Completed 8.8 MiB/32.9 MiB (8.1 MiB/s) with 1 file(s) remaining    Completed 9.0 MiB/32.9 MiB (8.2 MiB/s) with 1 file(s) remaining    Completed 9.2 MiB/32.9 MiB (8.3 MiB/s) with 1 file(s) remaining    Completed 9.5 MiB/32.9 MiB (8.5 MiB/s) with 1 file(s) remaining    Completed 9.8 MiB/32.9 MiB (8.6 MiB/s) with 1 file(s) remaining    Completed 10.0 MiB/32.9 MiB (8.8 MiB/s) with 1 file(s) remaining   Completed 10.2 MiB/32.9 MiB (8.9 MiB/s) with 1 file(s) remaining   Completed 10.5 MiB/32.9 MiB (9.0 MiB/s) with 1 file(s) remaining   Completed 10.8 MiB/32.9 MiB (9.2 MiB/s) with 1 file(s) remaining   Completed 11.0 MiB/32.9 MiB (9.4 MiB/s) with 1 file(s) remaining   Completed 11.2 MiB/32.9 MiB (9.5 MiB/s) with 1 file(s) remaining   Completed 11.5 MiB/32.9 MiB (9.6 MiB/s) with 1 file(s) remaining   Completed 11.8 MiB/32.9 MiB (9.7 MiB/s) with 1 file(s) remaining   Completed 12.0 MiB/32.9 MiB (9.9 MiB/s) with 1 file(s) remaining   Completed 12.2 MiB/32.9 MiB (9.9 MiB/s) with 1 file(s) remaining   Completed 12.5 MiB/32.9 MiB (10.0 MiB/s) with 1 file(s) remaining  Completed 12.8 MiB/32.9 MiB (10.1 MiB/s) with 1 file(s) remaining  Completed 13.0 MiB/32.9 MiB (10.2 MiB/s) with 1 file(s) remaining  Completed 13.2 MiB/32.9 MiB (10.3 MiB/s) with 1 file(s) remaining  Completed 13.5 MiB/32.9 MiB (10.4 MiB/s) with 1 file(s) remaining  Completed 13.8 MiB/32.9 MiB (10.3 MiB/s) with 1 file(s) remaining  Completed 14.0 MiB/32.9 MiB (10.4 MiB/s) with 1 file(s) remaining  Completed 14.2 MiB/32.9 MiB (10.6 MiB/s) with 1 file(s) remaining  Completed 14.5 MiB/32.9 MiB (10.4 MiB/s) with 1 file(s) remaining  Completed 14.6 MiB/32.9 MiB (10.5 MiB/s) with 1 file(s) remaining  Completed 14.9 MiB/32.9 MiB (10.7 MiB/s) with 1 file(s) remaining  Completed 15.1 MiB/32.9 MiB (10.7 MiB/s) with 1 file(s) remaining  Completed 15.4 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 15.6 MiB/32.9 MiB (10.4 MiB/s) with 1 file(s) remaining  Completed 15.9 MiB/32.9 MiB (10.6 MiB/s) with 1 file(s) remaining  Completed 16.1 MiB/32.9 MiB (10.6 MiB/s) with 1 file(s) remaining  Completed 16.4 MiB/32.9 MiB (10.7 MiB/s) with 1 file(s) remaining  Completed 16.6 MiB/32.9 MiB (10.5 MiB/s) with 1 file(s) remaining  Completed 16.9 MiB/32.9 MiB (10.6 MiB/s) with 1 file(s) remaining  Completed 17.1 MiB/32.9 MiB (10.7 MiB/s) with 1 file(s) remaining  Completed 17.4 MiB/32.9 MiB (10.9 MiB/s) with 1 file(s) remaining  Completed 17.6 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 17.9 MiB/32.9 MiB (10.9 MiB/s) with 1 file(s) remaining  Completed 18.1 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 18.4 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 18.6 MiB/32.9 MiB (10.9 MiB/s) with 1 file(s) remaining  Completed 18.9 MiB/32.9 MiB (10.7 MiB/s) with 1 file(s) remaining  Completed 19.1 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 19.4 MiB/32.9 MiB (10.9 MiB/s) with 1 file(s) remaining  Completed 19.6 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 19.9 MiB/32.9 MiB (10.9 MiB/s) with 1 file(s) remaining  Completed 20.1 MiB/32.9 MiB (10.9 MiB/s) with 1 file(s) remaining  Completed 20.4 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 20.6 MiB/32.9 MiB (10.9 MiB/s) with 1 file(s) remaining  Completed 20.9 MiB/32.9 MiB (11.0 MiB/s) with 1 file(s) remaining  Completed 21.1 MiB/32.9 MiB (11.1 MiB/s) with 1 file(s) remaining  Completed 21.4 MiB/32.9 MiB (11.2 MiB/s) with 1 file(s) remaining  Completed 21.6 MiB/32.9 MiB (11.1 MiB/s) with 1 file(s) remaining  Completed 21.9 MiB/32.9 MiB (11.2 MiB/s) with 1 file(s) remaining  Completed 22.1 MiB/32.9 MiB (11.2 MiB/s) with 1 file(s) remaining  Completed 22.4 MiB/32.9 MiB (11.1 MiB/s) with 1 file(s) remaining  Completed 22.6 MiB/32.9 MiB (11.1 MiB/s) with 1 file(s) remaining  Completed 22.9 MiB/32.9 MiB (11.2 MiB/s) with 1 file(s) remaining  Completed 23.1 MiB/32.9 MiB (11.3 MiB/s) with 1 file(s) remaining  Completed 23.4 MiB/32.9 MiB (11.2 MiB/s) with 1 file(s) remaining  Completed 23.6 MiB/32.9 MiB (11.2 MiB/s) with 1 file(s) remaining  Completed 23.9 MiB/32.9 MiB (11.3 MiB/s) with 1 file(s) remaining  Completed 24.1 MiB/32.9 MiB (11.4 MiB/s) with 1 file(s) remaining  Completed 24.4 MiB/32.9 MiB (11.4 MiB/s) with 1 file(s) remaining  Completed 24.6 MiB/32.9 MiB (11.3 MiB/s) with 1 file(s) remaining  Completed 24.9 MiB/32.9 MiB (11.4 MiB/s) with 1 file(s) remaining  Completed 25.1 MiB/32.9 MiB (11.4 MiB/s) with 1 file(s) remaining  Completed 25.4 MiB/32.9 MiB (11.5 MiB/s) with 1 file(s) remaining  Completed 25.6 MiB/32.9 MiB (11.5 MiB/s) with 1 file(s) remaining  Completed 25.9 MiB/32.9 MiB (11.5 MiB/s) with 1 file(s) remaining  Completed 26.1 MiB/32.9 MiB (11.6 MiB/s) with 1 file(s) remaining  Completed 26.4 MiB/32.9 MiB (11.6 MiB/s) with 1 file(s) remaining  Completed 26.6 MiB/32.9 MiB (11.6 MiB/s) with 1 file(s) remaining  Completed 26.9 MiB/32.9 MiB (11.7 MiB/s) with 1 file(s) remaining  Completed 27.1 MiB/32.9 MiB (11.7 MiB/s) with 1 file(s) remaining  Completed 27.4 MiB/32.9 MiB (11.7 MiB/s) with 1 file(s) remaining  Completed 27.6 MiB/32.9 MiB (11.7 MiB/s) with 1 file(s) remaining  Completed 27.9 MiB/32.9 MiB (11.5 MiB/s) with 1 file(s) remaining  Completed 28.1 MiB/32.9 MiB (11.6 MiB/s) with 1 file(s) remaining  Completed 28.4 MiB/32.9 MiB (11.7 MiB/s) with 1 file(s) remaining  Completed 28.6 MiB/32.9 MiB (11.4 MiB/s) with 1 file(s) remaining  Completed 28.9 MiB/32.9 MiB (11.3 MiB/s) with 1 file(s) remaining  Completed 29.1 MiB/32.9 MiB (11.2 MiB/s) with 1 file(s) remaining  Completed 29.4 MiB/32.9 MiB (11.2 MiB/s) with 1 file(s) remaining  Completed 29.6 MiB/32.9 MiB (11.0 MiB/s) with 1 file(s) remaining  Completed 29.9 MiB/32.9 MiB (11.0 MiB/s) with 1 file(s) remaining  Completed 30.1 MiB/32.9 MiB (11.0 MiB/s) with 1 file(s) remaining  Completed 30.4 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 30.6 MiB/32.9 MiB (10.9 MiB/s) with 1 file(s) remaining  Completed 30.9 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 31.1 MiB/32.9 MiB (10.8 MiB/s) with 1 file(s) remaining  Completed 31.4 MiB/32.9 MiB (10.6 MiB/s) with 1 file(s) remaining  Completed 31.6 MiB/32.9 MiB (10.6 MiB/s) with 1 file(s) remaining  Completed 31.9 MiB/32.9 MiB (10.5 MiB/s) with 1 file(s) remaining  Completed 32.1 MiB/32.9 MiB (10.3 MiB/s) with 1 file(s) remaining  Completed 32.4 MiB/32.9 MiB (10.3 MiB/s) with 1 file(s) remaining  Completed 32.6 MiB/32.9 MiB (10.2 MiB/s) with 1 file(s) remaining  Completed 32.9 MiB/32.9 MiB (10.2 MiB/s) with 1 file(s) remaining  upload: ./model.zip to s3://dalprd.us-cross-region.relationship-extraction/customization/train/wks/public/crn:v1:bluemix:public:knowledge-studio:us-south:a/f9ab1b1dbd5941abb847d790e85ff36f:c94df470-cfd6-4591-863b-2ae21ac74576::/tnxc5j44oz88yk30/train/5959cd88-25d8-4d54-aba9-41bb11aa664d/53772759-9ad8-4279-97c8-48ce8719f4eb/model.zip
